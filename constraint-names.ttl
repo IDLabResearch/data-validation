@@ -1,0 +1,10 @@
+@prefix rdfcv: <http://www.dr-thomashartmann.de/phd-thesis/rdf-validation/vocabularies/rdf-constraints-vocabulary#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms#> .
+@base <http://example.com/constraints#> .
+
+:constraint_A_4 a rdfcv:SimpleConstraint ;
+  dcterms:title "A.4 Subsumption" ;
+  rdfcv:constrainingElement :sub-class ;
+  rdfcv:contextClass  ?C1 ;
+  rdfcv:classes ( ?C2 ) .
