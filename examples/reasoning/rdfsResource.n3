@@ -8,27 +8,15 @@
 @base <http://example.com/constraints#> .
 
 
-#elements of ?class can have at most one value for ?property 
+#required for A_1 A_2
 
-{
-:constraint_A_1 rdfcv:leftProperties ?list ;
-  rdfcv:contextClass  ?class.
-  ?x a ?class.
-  ?property list:in ?list.
-  ?x ?property ?object.
-  ?x ?property ?object2.
-  ?object log:notEqualTo ?object2
-}
+
+#empty context class, maybe there is a better solution?
+{?s ?p ?o}
 =>
 {
-_:x a :constraintViolation;
-    #:caused_by {?x ?property ?object, ?object2. };
-    :violatedConstraint :constrained_A_1;
-    :subject ?x;
-    :onProperty ?property;
-    :object ?object;
-    :object ?object2.
+?s a rdfs:Resource.
+?p a rdfs:Resource.
+?o a rdfs:Resource.
 }.
-
-
 

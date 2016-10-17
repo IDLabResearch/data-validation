@@ -11,23 +11,23 @@
 #elements of ?class can have at most one value for ?property 
 
 {
-:constraint_A_1 rdfcv:leftProperties ?list ;
+:constraint_A_2 rdfcv:leftProperties ?list ;
   rdfcv:contextClass  ?class.
-  ?x a ?class.
+  ?object a ?class.
   ?property list:in ?list.
-  ?x ?property ?object.
-  ?x ?property ?object2.
-  ?object log:notEqualTo ?object2
+  ?x1 ?property ?object.
+  ?x2 ?property ?object.
+  ?x1 log:notEqualTo ?x2
 }
 =>
 {
 _:x a :constraintViolation;
     #:caused_by {?x ?property ?object, ?object2. };
-    :violatedConstraint :constrained_A_1;
-    :subject ?x;
+    :violatedConstraint :constrained_A_2;
+    :subject ?x1;
+    :subject ?x2;
     :onProperty ?property;
-    :object ?object;
-    :object ?object2.
+    :object ?object.
 }.
 
 
