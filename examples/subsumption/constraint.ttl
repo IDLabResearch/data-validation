@@ -5,16 +5,8 @@
 @base <http://example.com/constraints#> .
 
 
-
-:constraint_A_1 a rdfcv:SimpleConstraint ;
-  dcterms:title "A.1 Functional Properties" ;
-  rdfcv:constrainingElement :functional-properties ;
-  rdfcv:leftProperties ( <p1> <p2> <pn> ) ;
-  rdfcv:contextClass  <C_context> .
-
-
 :constraint_A_4 a rdfcv:SimpleConstraint ;
   dcterms:title "A.4 Subsumption" ;
   rdfcv:constrainingElement :sub-class ;
-  rdfcv:contextClass  <C1> ;
-  rdfcv:classes ( <C2> ) .
+  rdfcv:contextClass  :Book;
+  rdfcv:classes ( :Publication ) .
