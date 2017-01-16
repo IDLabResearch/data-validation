@@ -23,7 +23,7 @@
 {
 _:x a :constraintViolation;
     #:caused_by {?x ?property ?object, ?object2. };
-    :violatedConstraint :constrained_A_1;
+    :violatedConstraint :constraint_A_1;
     :subject ?x;
     :onProperty ?property;
     :object ?object;
