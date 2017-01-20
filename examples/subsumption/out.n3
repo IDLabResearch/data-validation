@@ -1,0 +1,88 @@
+#Processed by EYE rel. v17.0116.1734 josd
+#eye data.ttl constraint.ttl --query rule.n3
+
+PREFIX rdfcv: <http://www.dr-thomashartmann.de/phd-thesis/rdf-validation/vocabularies/rdf-constraints-vocabulary#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dcterms: <http://purl.org/dc/terms#>
+PREFIX : <http://example.com/constraints#>
+PREFIX list: <http://www.w3.org/2000/10/swap/list#>
+PREFIX e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>
+PREFIX log: <http://www.w3.org/2000/10/swap/log#>
+PREFIX r: <http://www.w3.org/2000/10/swap/reason#>
+
+[] a r:Proof, r:Conjunction;
+  r:component <#lemma1>;
+  r:gives {
+    _:sk_0 a :constraintViolation.
+    _:sk_0 :violatedConstraint :example_constraint_A_4.
+    _:sk_0 :subclass :Book.
+    _:sk_0 :superclass :Publication.
+    _:sk_0 :onResource :Tom_Sawyer.
+  }.
+
+<#lemma1> a r:Inference; 
+  r:gives {
+    _:sk_0 a :constraintViolation.
+    _:sk_0 :violatedConstraint :example_constraint_A_4.
+    _:sk_0 :subclass :Book.
+    _:sk_0 :superclass :Publication.
+    _:sk_0 :onResource :Tom_Sawyer.
+  }; 
+  r:evidence (
+    <#lemma2>
+    <#lemma3>
+    <#lemma4>
+    <#lemma5>
+    <#lemma6>
+    [ a r:Fact; r:gives {((<file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/subsumption/data.ttl> <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/subsumption/constraint.ttl>) 1) e:findall (1 {:Tom_Sawyer a :Publication} ())}]
+  );
+  r:rule <#lemma7>.
+
+<#lemma2> a r:Extraction; 
+  r:gives {
+    :example_constraint_A_4 a rdfcv:SimpleConstraint.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/subsumption/constraint.ttl>].
+
+<#lemma3> a r:Extraction; 
+  r:gives {
+    :example_constraint_A_4 rdfcv:constrainingElement :sub-class.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/subsumption/constraint.ttl>].
+
+<#lemma4> a r:Extraction; 
+  r:gives {
+    :example_constraint_A_4 rdfcv:contextClass :Book.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/subsumption/constraint.ttl>].
+
+<#lemma5> a r:Extraction; 
+  r:gives {
+    :example_constraint_A_4 rdfcv:classes :Publication.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/subsumption/constraint.ttl>].
+
+<#lemma6> a r:Extraction; 
+  r:gives {
+    :Tom_Sawyer a :Book.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/subsumption/data.ttl>].
+
+<#lemma7> a r:Extraction; 
+  r:gives {
+    {?x_0_1 a rdfcv:SimpleConstraint.
+      ?x_0_1 rdfcv:constrainingElement :sub-class.
+      ?x_0_1 rdfcv:contextClass ?x_1_1.
+      ?x_0_1 rdfcv:classes ?x_2_1.
+      ?x_3_1 a ?x_1_1.
+      ?x_4_1 e:findall (1 {?x_3_1 a ?x_2_1} ())} => {_:x_5_1 a :constraintViolation.
+      _:x_5_1 :violatedConstraint ?x_0_1.
+      _:x_5_1 :subclass ?x_1_1.
+      _:x_5_1 :superclass ?x_2_1.
+      _:x_5_1 :onResource ?x_3_1}.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/subsumption/rule.n3>].
+
+#2017-01-20T14:31:11.873Z in=7 out=5 ent=5 step=1 brake=2 inf=49493 sec=0.068 inf/sec=727838
+#ENDS
+

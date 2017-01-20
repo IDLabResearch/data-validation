@@ -11,23 +11,20 @@
 
 {
 ?constraint a rdfcv:SimpleConstraint;
-  rdfcv:constrainingElement :inverse-functional-properties;
-  rdfcv:leftProperties ?list ;
-  rdfcv:contextClass  ?class.
-  ?object a ?class.
-  ?property list:in ?list.
-  ?x1 ?property ?object.
-  ?x2 ?property ?object.
-  ?x1 log:notEqualTo ?x2
+  rdfcv:constrainingElement :sub-property;
+  rdfcv:leftProperties ?property1; 
+  rdfcv:rightProperties ?property2.
+  ?x ?property1 ?y.
+  _:x e:findall (1 {?x ?property2 ?y} ()).
 }
 =>
 {
 _:x a :constraintViolation;
     :violatedConstraint ?constraint;
-    :subject ?x1;
-    :subject ?x2;
-    :onProperty ?property;
-    :object ?object.
+    :subproperty ?property1;
+    :superpropety ?property2;
+    :subject ?x;
+    :object ?y.
 }.
 
 

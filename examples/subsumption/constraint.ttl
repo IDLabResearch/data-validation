@@ -5,8 +5,8 @@
 @base <http://example.com/constraints#> .
 
 
-:constraint_A_4 a rdfcv:SimpleConstraint ;
+:example_constraint_A_4 a rdfcv:SimpleConstraint ;
   dcterms:title "A.4 Subsumption" ;
   rdfcv:constrainingElement :sub-class ;
   rdfcv:contextClass  :Book;
-  rdfcv:classes ( :Publication ) .
+  rdfcv:classes :Publication .

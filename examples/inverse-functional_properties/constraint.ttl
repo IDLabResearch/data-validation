@@ -6,7 +6,7 @@
 @base <http://example.com/constraints#> .
 
 
-:constraint_A_2 a rdfcv:SimpleConstraint ;
+:example_constraint_A_2 a rdfcv:SimpleConstraint ;
   dcterms:title "A.2 Inverse-Functional Properties" ;
   rdfcv:constrainingElement :inverse-functional-properties ;
   rdfcv:leftProperties ( adms:identifier ) ;

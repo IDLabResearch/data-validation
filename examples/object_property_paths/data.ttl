@@ -5,8 +5,10 @@
 @base <http://example.com/constraints#> .
 
 
-:example_constraint_A_1 a rdfcv:SimpleConstraint ;
-  dcterms:title "A.1 Functional Properties" ;
-  rdfcv:constrainingElement :functional-properties ;
-  rdfcv:leftProperties ( :isbn ) ;
-  rdfcv:contextClass  :Book .
+
+:Stephen_Hawking :authorOf :A-Brief-History-Of-Time .
+:A-Brief-History-Of-Time :genre :Popular-Science.
+
+
+
+

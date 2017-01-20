@@ -8,15 +8,10 @@
 @base <http://example.com/constraints#> .
 
 
-#required for A_1 A_2
+#this is independent of "normal reasoning" we need it whenever the context class is rdfs:Resource
 
-
-#empty context class, maybe there is a better solution?
-{?s ?p ?o}
-=>
 {
 ?s a rdfs:Resource.
-?p a rdfs:Resource.
-?o a rdfs:Resource.
-}.
+}
+<={}.
 

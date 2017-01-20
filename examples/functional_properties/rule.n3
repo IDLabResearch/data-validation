@@ -7,11 +7,11 @@
 @prefix log: <http://www.w3.org/2000/10/swap/log#> .
 @base <http://example.com/constraints#> .
 
-
-#elements of ?class can have at most one value for ?property 
-
+ 
 {
-:constraint_A_1 rdfcv:leftProperties ?list ;
+  ?constraint a rdfcv:SimpleConstraint;
+  rdfcv:constrainingElement :functional-properties;
+  rdfcv:leftProperties ?list ;
   rdfcv:contextClass  ?class.
   ?x a ?class.
   ?property list:in ?list.
@@ -22,8 +22,7 @@
 =>
 {
 _:x a :constraintViolation;
-    #:caused_by {?x ?property ?object, ?object2. };
-    :violatedConstraint :constraint_A_1;
+    :violatedConstraint ?constraint;
     :subject ?x;
     :onProperty ?property;
     :object ?object;

@@ -1,0 +1,91 @@
+#Processed by EYE rel. v17.0116.1734 josd
+#eye data.ttl constraint.ttl --query rule.n3
+
+PREFIX rdfcv: <http://www.dr-thomashartmann.de/phd-thesis/rdf-validation/vocabularies/rdf-constraints-vocabulary#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dcterms: <http://purl.org/dc/terms#>
+PREFIX : <http://example.com/constraints#>
+PREFIX list: <http://www.w3.org/2000/10/swap/list#>
+PREFIX e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>
+PREFIX log: <http://www.w3.org/2000/10/swap/log#>
+PREFIX r: <http://www.w3.org/2000/10/swap/reason#>
+
+[] a r:Proof, r:Conjunction;
+  r:component <#lemma1>;
+  r:gives {
+    _:sk_0 a :constraintViolation.
+    _:sk_0 :violatedConstraint :example_constraint_A_5.
+    _:sk_0 :subproperty :editor.
+    _:sk_0 :superpropety :creator.
+    _:sk_0 :subject :JournalA.
+    _:sk_0 :object :Eddi_Editor.
+  }.
+
+<#lemma1> a r:Inference; 
+  r:gives {
+    _:sk_0 a :constraintViolation.
+    _:sk_0 :violatedConstraint :example_constraint_A_5.
+    _:sk_0 :subproperty :editor.
+    _:sk_0 :superpropety :creator.
+    _:sk_0 :subject :JournalA.
+    _:sk_0 :object :Eddi_Editor.
+  }; 
+  r:evidence (
+    <#lemma2>
+    <#lemma3>
+    <#lemma4>
+    <#lemma5>
+    <#lemma6>
+    [ a r:Fact; r:gives {((<file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/sub-properties/data.ttl> <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/sub-properties/constraint.ttl>) 1) e:findall (1 {:JournalA :creator :Eddi_Editor} ())}]
+  );
+  r:rule <#lemma7>.
+
+<#lemma2> a r:Extraction; 
+  r:gives {
+    :example_constraint_A_5 a rdfcv:SimpleConstraint.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/sub-properties/constraint.ttl>].
+
+<#lemma3> a r:Extraction; 
+  r:gives {
+    :example_constraint_A_5 rdfcv:constrainingElement :sub-property.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/sub-properties/constraint.ttl>].
+
+<#lemma4> a r:Extraction; 
+  r:gives {
+    :example_constraint_A_5 rdfcv:leftProperties :editor.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/sub-properties/constraint.ttl>].
+
+<#lemma5> a r:Extraction; 
+  r:gives {
+    :example_constraint_A_5 rdfcv:rightProperties :creator.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/sub-properties/constraint.ttl>].
+
+<#lemma6> a r:Extraction; 
+  r:gives {
+    :JournalA :editor :Eddi_Editor.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/sub-properties/data.ttl>].
+
+<#lemma7> a r:Extraction; 
+  r:gives {
+    {?x_0_1 a rdfcv:SimpleConstraint.
+      ?x_0_1 rdfcv:constrainingElement :sub-property.
+      ?x_0_1 rdfcv:leftProperties ?x_1_1.
+      ?x_0_1 rdfcv:rightProperties ?x_2_1.
+      ?x_3_1 ?x_1_1 ?x_4_1.
+      ?x_5_1 e:findall (1 {?x_3_1 ?x_2_1 ?x_4_1} ())} => {_:x_6_1 a :constraintViolation.
+      _:x_6_1 :violatedConstraint ?x_0_1.
+      _:x_6_1 :subproperty ?x_1_1.
+      _:x_6_1 :superpropety ?x_2_1.
+      _:x_6_1 :subject ?x_3_1.
+      _:x_6_1 :object ?x_4_1}.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/sub-properties/rule.n3>].
+
+#2017-01-20T15:18:06.437Z in=7 out=6 ent=6 step=1 brake=2 inf=52269 sec=0.063 inf/sec=829667
+#ENDS
+

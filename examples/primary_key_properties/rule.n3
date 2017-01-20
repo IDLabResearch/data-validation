@@ -8,14 +8,13 @@
 @base <http://example.com/constraints#> .
 
 
-
 {
 ?constraint a rdfcv:SimpleConstraint;
-  rdfcv:constrainingElement :inverse-functional-properties;
-  rdfcv:leftProperties ?list ;
+  rdfcv:constrainingElement :primary-key;
+  rdfcv:leftProperties ?property ;
   rdfcv:contextClass  ?class.
-  ?object a ?class.
-  ?property list:in ?list.
+  ?x1 a ?class.
+  ?x2 a ?class.
   ?x1 ?property ?object.
   ?x2 ?property ?object.
   ?x1 log:notEqualTo ?x2

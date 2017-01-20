@@ -1,4 +1,4 @@
-#Processed by EYE v16.1012.0824 beta josd
+#Processed by EYE rel. v17.0116.1734 josd
 #eye ../reasoning/rdfsResource.n3 data.ttl constraint.ttl --query rule.n3
 
 PREFIX rdfcv: <http://www.dr-thomashartmann.de/phd-thesis/rdf-validation/vocabularies/rdf-constraints-vocabulary#>
@@ -15,7 +15,7 @@ PREFIX r: <http://www.w3.org/2000/10/swap/reason#>
   r:component <#lemma1>;
   r:gives {
     _:sk_0 a :constraintViolation.
-    _:sk_0 :violatedConstraint :constrained_A_2.
+    _:sk_0 :violatedConstraint :example_constraint_A_2.
     _:sk_0 :subject :A.
     _:sk_0 :subject :B.
     _:sk_0 :onProperty adms:identifier.
@@ -25,7 +25,7 @@ PREFIX r: <http://www.w3.org/2000/10/swap/reason#>
 <#lemma1> a r:Inference; 
   r:gives {
     _:sk_0 a :constraintViolation.
-    _:sk_0 :violatedConstraint :constrained_A_2.
+    _:sk_0 :violatedConstraint :example_constraint_A_2.
     _:sk_0 :subject :A.
     _:sk_0 :subject :B.
     _:sk_0 :onProperty adms:identifier.
@@ -35,72 +35,85 @@ PREFIX r: <http://www.w3.org/2000/10/swap/reason#>
     <#lemma2>
     <#lemma3>
     <#lemma4>
-    [ a r:Fact; r:gives {adms:identifier list:in (adms:identifier)}]
     <#lemma5>
     <#lemma6>
+    [ a r:Fact; r:gives {adms:identifier list:in (adms:identifier)}]
+    <#lemma7>
+    <#lemma8>
     [ a r:Fact; r:gives {:A log:notEqualTo :B}]
   );
-  r:rule <#lemma7>.
+  r:rule <#lemma9>.
 
 <#lemma2> a r:Extraction; 
   r:gives {
-    :constraint_A_2 rdfcv:leftProperties (adms:identifier).
+    :example_constraint_A_2 a rdfcv:SimpleConstraint.
   };
   r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/inverse-functional_properties/constraint.ttl>].
 
 <#lemma3> a r:Extraction; 
   r:gives {
-    :constraint_A_2 rdfcv:contextClass rdfs:Resource.
+    :example_constraint_A_2 rdfcv:constrainingElement :inverse-functional-properties.
   };
   r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/inverse-functional_properties/constraint.ttl>].
 
-<#lemma4> a r:Inference; 
+<#lemma4> a r:Extraction; 
   r:gives {
-    :A a rdfs:Resource.
-    adms:identifier a rdfs:Resource.
+    :example_constraint_A_2 rdfcv:leftProperties (adms:identifier).
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/inverse-functional_properties/constraint.ttl>].
+
+<#lemma5> a r:Extraction; 
+  r:gives {
+    :example_constraint_A_2 rdfcv:contextClass rdfs:Resource.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/inverse-functional_properties/constraint.ttl>].
+
+<#lemma6> a r:Inference; 
+  r:gives {
     :id a rdfs:Resource.
   }; 
   r:evidence (
-    <#lemma5>
+    [ a r:Fact; r:gives true]
   );
-  r:rule <#lemma8>.
+  r:rule <#lemma10>.
 
-<#lemma5> a r:Extraction; 
+<#lemma7> a r:Extraction; 
   r:gives {
     :A adms:identifier :id.
   };
   r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/inverse-functional_properties/data.ttl>].
 
-<#lemma6> a r:Extraction; 
+<#lemma8> a r:Extraction; 
   r:gives {
     :B adms:identifier :id.
   };
   r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/inverse-functional_properties/data.ttl>].
 
-<#lemma7> a r:Extraction; 
+<#lemma9> a r:Extraction; 
   r:gives {
-    {:constraint_A_2 rdfcv:leftProperties ?x_0_1.
-      :constraint_A_2 rdfcv:contextClass ?x_1_1.
-      ?x_2_1 a ?x_1_1.
-      ?x_3_1 list:in ?x_0_1.
-      ?x_4_1 ?x_3_1 ?x_2_1.
-      ?x_5_1 ?x_3_1 ?x_2_1.
-      ?x_4_1 log:notEqualTo ?x_5_1} => {_:x_6_1 a :constraintViolation.
-      _:x_6_1 :violatedConstraint :constrained_A_2.
-      _:x_6_1 :subject ?x_4_1.
-      _:x_6_1 :subject ?x_5_1.
-      _:x_6_1 :onProperty ?x_3_1.
-      _:x_6_1 :object ?x_2_1}.
+    {?x_0_1 a rdfcv:SimpleConstraint.
+      ?x_0_1 rdfcv:constrainingElement :inverse-functional-properties.
+      ?x_0_1 rdfcv:leftProperties ?x_1_1.
+      ?x_0_1 rdfcv:contextClass ?x_2_1.
+      ?x_3_1 a ?x_2_1.
+      ?x_4_1 list:in ?x_1_1.
+      ?x_5_1 ?x_4_1 ?x_3_1.
+      ?x_6_1 ?x_4_1 ?x_3_1.
+      ?x_5_1 log:notEqualTo ?x_6_1} => {_:x_7_1 a :constraintViolation.
+      _:x_7_1 :violatedConstraint ?x_0_1.
+      _:x_7_1 :subject ?x_5_1.
+      _:x_7_1 :subject ?x_6_1.
+      _:x_7_1 :onProperty ?x_4_1.
+      _:x_7_1 :object ?x_3_1}.
   };
   r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/inverse-functional_properties/rule.n3>].
 
-<#lemma8> a r:Extraction; 
+<#lemma10> a r:Extraction; 
   r:gives {
-    {?x_1_2 ?x_0_2 ?x_2_2} => {?x_1_2 a rdfs:Resource.
-      ?x_0_2 a rdfs:Resource.
-      ?x_2_2 a rdfs:Resource}.
+    {?x_0_2 a rdfs:Resource} <= true.
   };
   r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/reasoning/rdfsResource.n3>].
 
-#ENDS 0.090 [sec] IO=9/6 TC=30 TP=37 BC=0 BP=0 PM=0 CM=0 FM=0 AM=0
+#2017-01-20T13:38:47.711Z in=9 out=6 ent=6 step=2 brake=1 inf=62848 sec=0.044 inf/sec=1428364
+#ENDS
 

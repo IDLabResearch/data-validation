@@ -1,0 +1,186 @@
+#Processed by EYE rel. v17.0117.2134 josd
+#eye data.ttl constraint.ttl rule.n3 --query ../query.n3
+
+PREFIX rdfcv: <http://www.dr-thomashartmann.de/phd-thesis/rdf-validation/vocabularies/rdf-constraints-vocabulary#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dcterms: <http://purl.org/dc/terms#>
+PREFIX : <http://example.com/constraints#>
+PREFIX list: <http://www.w3.org/2000/10/swap/list#>
+PREFIX e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>
+PREFIX log: <http://www.w3.org/2000/10/swap/log#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX r: <http://www.w3.org/2000/10/swap/reason#>
+
+[] a r:Proof, r:Conjunction;
+  r:component <#lemma1>;
+  r:component <#lemma2>;
+  r:component <#lemma3>;
+  r:component <#lemma4>;
+  r:gives {
+    _:sk_1 a :constraintViolation.
+    _:sk_3 :violatedConstraint :example_constraint_A_6.
+    _:sk_5 :path (:Stephen_Hawking :authorOf :A-Brief-History-Of-Time :genre :Popular-Science).
+    _:sk_7 :chainedproperty :authorOfGenre.
+  }.
+
+<#lemma1> a r:Inference; 
+  r:gives {
+    _:sk_1 a :constraintViolation.
+  }; 
+  r:evidence (
+    <#lemma5>
+    <#lemma5>
+  );
+  r:rule <#lemma6>.
+
+<#lemma2> a r:Inference; 
+  r:gives {
+    _:sk_3 :violatedConstraint :example_constraint_A_6.
+  }; 
+  r:evidence (
+    <#lemma5>
+    <#lemma5>
+  );
+  r:rule <#lemma6>.
+
+<#lemma3> a r:Inference; 
+  r:gives {
+    _:sk_5 :path (:Stephen_Hawking :authorOf :A-Brief-History-Of-Time :genre :Popular-Science).
+  }; 
+  r:evidence (
+    <#lemma5>
+    <#lemma5>
+  );
+  r:rule <#lemma6>.
+
+<#lemma4> a r:Inference; 
+  r:gives {
+    _:sk_7 :chainedproperty :authorOfGenre.
+  }; 
+  r:evidence (
+    <#lemma5>
+    <#lemma5>
+  );
+  r:rule <#lemma6>.
+
+<#lemma5> a r:Inference; 
+  r:gives {
+    _:sk_0 a :constraintViolation.
+    _:sk_0 :violatedConstraint :example_constraint_A_6.
+    _:sk_0 :path (:Stephen_Hawking :authorOf :A-Brief-History-Of-Time :genre :Popular-Science).
+    _:sk_0 :chainedproperty :authorOfGenre.
+  }; 
+  r:evidence (
+    <#lemma7>
+    <#lemma8>
+    <#lemma9>
+    <#lemma10>
+    [ a r:Fact; r:gives {(:authorOf :genre) rdf:first :authorOf}]
+    <#lemma11>
+    [ a r:Fact; r:gives {(:authorOf :genre) rdf:rest (:genre)}]
+    <#lemma12>
+    [ a r:Fact; r:gives {((<file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/object_property_paths/data.ttl> <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/object_property_paths/constraint.ttl> <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/object_property_paths/rule.n3>) 1) e:findall (1 {:Stephen_Hawking :authorOfGenre :Popular-Science} ())}]
+  );
+  r:rule <#lemma13>.
+
+<#lemma6> a r:Extraction; 
+  r:gives {
+    {?x_0_1 a :constraintViolation.
+      ?x_0_1 ?x_1_1 ?x_2_1} => {_:x_3_1 ?x_1_1 ?x_2_1}.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/query.n3>].
+
+<#lemma7> a r:Extraction; 
+  r:gives {
+    :example_constraint_A_6 a rdfcv:SimpleConstraint.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/object_property_paths/constraint.ttl>].
+
+<#lemma8> a r:Extraction; 
+  r:gives {
+    :example_constraint_A_6 rdfcv:constrainingElement :object-property-path.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/object_property_paths/constraint.ttl>].
+
+<#lemma9> a r:Extraction; 
+  r:gives {
+    :example_constraint_A_6 rdfcv:leftProperties (:authorOf :genre).
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/object_property_paths/constraint.ttl>].
+
+<#lemma10> a r:Extraction; 
+  r:gives {
+    :example_constraint_A_6 rdfcv:rightProperties :authorOfGenre.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/object_property_paths/constraint.ttl>].
+
+<#lemma11> a r:Extraction; 
+  r:gives {
+    :Stephen_Hawking :authorOf :A-Brief-History-Of-Time.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/object_property_paths/data.ttl>].
+
+<#lemma12> a r:Inference; 
+  r:gives {
+    (:A-Brief-History-Of-Time (:genre) (:Stephen_Hawking :authorOf :A-Brief-History-Of-Time)) :propertyPath (:Popular-Science (:Stephen_Hawking :authorOf :A-Brief-History-Of-Time :genre :Popular-Science)).
+  }; 
+  r:evidence (
+    [ a r:Fact; r:gives {(:genre) rdf:first :genre}]
+    <#lemma14>
+    [ a r:Fact; r:gives {((:Stephen_Hawking :authorOf :A-Brief-History-Of-Time) (:genre :Popular-Science)) list:append (:Stephen_Hawking :authorOf :A-Brief-History-Of-Time :genre :Popular-Science)}]
+    [ a r:Fact; r:gives {(:genre) rdf:rest ()}]
+    <#lemma15>
+  );
+  r:rule <#lemma16>.
+
+<#lemma13> a r:Extraction; 
+  r:gives {
+    {?x_0_2 a rdfcv:SimpleConstraint.
+      ?x_0_2 rdfcv:constrainingElement :object-property-path.
+      ?x_0_2 rdfcv:leftProperties ?x_1_2.
+      ?x_0_2 rdfcv:rightProperties ?x_2_2.
+      ?x_1_2 rdf:first ?x_3_2.
+      ?x_4_2 ?x_3_2 ?x_5_2.
+      ?x_1_2 rdf:rest ?x_6_2.
+      (?x_5_2 ?x_6_2 (?x_4_2 ?x_3_2 ?x_5_2)) :propertyPath (?x_7_2 ?x_8_2).
+      ?x_9_2 e:findall (1 {?x_4_2 ?x_2_2 ?x_7_2} ())} => {_:x_10_2 a :constraintViolation.
+      _:x_10_2 :violatedConstraint ?x_0_2.
+      _:x_10_2 :path ?x_8_2.
+      _:x_10_2 :chainedproperty ?x_2_2}.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/object_property_paths/rule.n3>].
+
+<#lemma14> a r:Extraction; 
+  r:gives {
+    :A-Brief-History-Of-Time :genre :Popular-Science.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/object_property_paths/data.ttl>].
+
+<#lemma15> a r:Inference; 
+  r:gives {
+    (:Popular-Science () (:Stephen_Hawking :authorOf :A-Brief-History-Of-Time :genre :Popular-Science)) :propertyPath (:Popular-Science (:Stephen_Hawking :authorOf :A-Brief-History-Of-Time :genre :Popular-Science)).
+  }; 
+  r:evidence (
+    [ a r:Fact; r:gives true]
+  );
+  r:rule <#lemma17>.
+
+<#lemma16> a r:Extraction; 
+  r:gives {
+    {(?x_2_3 ?x_0_3 ?x_4_3) :propertyPath (?x_7_3 ?x_8_3)} <= {?x_0_3 rdf:first ?x_1_3.
+      ?x_2_3 ?x_1_3 ?x_3_3.
+      (?x_4_3 (?x_1_3 ?x_3_3)) list:append ?x_5_3.
+      ?x_0_3 rdf:rest ?x_6_3.
+      (?x_3_3 ?x_6_3 ?x_5_3) :propertyPath (?x_7_3 ?x_8_3)}.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/object_property_paths/rule.n3>].
+
+<#lemma17> a r:Extraction; 
+  r:gives {
+    {(?x_0_4 () ?x_1_4) :propertyPath (?x_0_4 ?x_1_4)} <= true.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/object_property_paths/rule.n3>].
+
+#2017-01-20T16:20:50.768Z in=11 out=4 ent=8 step=10 brake=4 inf=82844 sec=0.054 inf/sec=1534148
+#ENDS
+

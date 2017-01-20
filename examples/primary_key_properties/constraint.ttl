@@ -2,11 +2,12 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dcterms: <http://purl.org/dc/terms#> .
 @prefix : <http://example.com/constraints#> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
 @base <http://example.com/constraints#> .
 
 
-:example_constraint_A_1 a rdfcv:SimpleConstraint ;
-  dcterms:title "A.1 Functional Properties" ;
-  rdfcv:constrainingElement :functional-properties ;
-  rdfcv:leftProperties ( :isbn ) ;
-  rdfcv:contextClass  :Book .
+:example_constraint_A_3 a rdfcv:SimpleConstraint ;
+  dcterms:title "A.3 Primary Key Properties" ;
+  rdfcv:constrainingElement :primary-key;
+  rdfcv:leftProperties :isbn ;
+  rdfcv:contextClass  :Book.
