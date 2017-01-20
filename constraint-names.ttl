@@ -60,3 +60,8 @@
   rdfcv:constrainingElement :equivalent-classes ;
   rdfcv:contextClass  <C_1> ;
   rdfcv:classes <C_2>.
+
+<constraintintance> a rdfcv:SimpleConstraint ;
+  dcterms:title "A.10 Equivalent Properties" ;
+  rdfcv:constrainingElement :equivalent-properties ;
+  rdfcv:leftProperties (<p1><p2><pn>).
