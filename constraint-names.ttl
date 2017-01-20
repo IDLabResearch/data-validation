@@ -5,16 +5,46 @@
 @base <http://example.com/constraints#> .
 
 
-
-:constraint_A_1 a rdfcv:SimpleConstraint ;
+<constraintintance> a rdfcv:SimpleConstraint ;
   dcterms:title "A.1 Functional Properties" ;
   rdfcv:constrainingElement :functional-properties ;
   rdfcv:leftProperties ( <p1> <p2> <pn> ) ;
   rdfcv:contextClass  <C_context> .
 
+<constraintintance> a rdfcv:SimpleConstraint ;
+  dcterms:title "A.2 Inverse-Functional Properties" ;
+  rdfcv:constrainingElement :inverse-functional-properties ;
+  rdfcv:leftProperties ( <p1> <p2> <pn> ) ;
+  rdfcv:contextClass  <C_context> .
 
-:constraint_A_4 a rdfcv:SimpleConstraint ;
+<constraintintance> a rdfcv:SimpleConstraint ;
+  dcterms:title "A.3 Primary Key Properties" ;
+  rdfcv:constrainingElement :primary-key ;
+  rdfcv:leftProperties  <p> ;
+  rdfcv:contextClass  <C_context> .
+
+<constraintintance> a rdfcv:SimpleConstraint ;
   dcterms:title "A.4 Subsumption" ;
   rdfcv:constrainingElement :sub-class ;
   rdfcv:contextClass  <C1> ;
-  rdfcv:classes ( <C2> ) .
+  rdfcv:classes <C2> .
+
+<constraintintance> a rdfcv:SimpleConstraint ;
+  dcterms:title "A.5 Sub-Properties" ;
+  rdfcv:constrainingElement :sub-property ;
+  rdfcv:leftProperties <p1>; 
+  rdfcv:rightProperties <p2>.
+
+<constraintintance> a rdfcv:SimpleConstraint ;
+  dcterms:title "A.6 Object Property Path" ;
+  rdfcv:constrainingElement :object-property-path ;
+  rdfcv:leftProperties ( <p1> <p2> <pn> ); 
+  rdfcv:rightProperties <p>.
+
+<constraintintance> a rdfcv:SimpleConstraint ;
+  dcterms:title "A.7 Allowed Values" ;
+  rdfcv:constrainingElement :allowed-values ;
+  rdfcv:contextClass  <C_context> ;
+  rdfcv:leftProperties <p>; 
+  rdfcv:classes (<C1> <C1> <Cn>).
+
