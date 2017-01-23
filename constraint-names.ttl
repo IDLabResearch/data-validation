@@ -68,7 +68,8 @@
 
 <constraintintance> a rdfcv:SimpleConstraint ;
   dcterms:title "A.11 Literal Value Comparison" ;
-  rdfcv:constrainingElement <mathematical-symbol> ; #predicate should be from <http://www.w3.org/2000/10/swap/math#>, <http://www.w3.org/2007/rif-builtin-function#> or <http://www.w3.org/2007/rif-builtin-predicate#>.
+  rdfcv:constrainingElement <mathematical-symbol> ; 
+  rdfs:comment "mathematical-symbol should be from <http://www.w3.org/2000/10/swap/math#>, <http://www.w3.org/2007/rif-builtin-function#> or <http://www.w3.org/2007/rif-builtin-predicate#>."
   rdfcv:contextClass  <C_context> ;
   rdfcv:leftProperties <p1> ;
   rdfcv:rightProperties <p2> ;
@@ -90,6 +91,13 @@
 <constraintintance> a rdfcv:SimpleConstraint ;
   dcterms:title "A.14 Property Ranges" ;
   rdfcv:constrainingElement :property-range ;
+  rdfcv:leftProperties <p> ;
+  rdfcv:classes <C> .
+
+<constraintintance> a rdfcv:SimpleConstraint ;
+  dcterms:title "A.15 Class-Specific Property Range" ;
+  rdfcv:constrainingElement :property-range ;
+  rdfcv:contextClass  <C_context> ;
   rdfcv:leftProperties <p> ;
   rdfcv:classes <C> .
 
