@@ -65,3 +65,19 @@
   dcterms:title "A.10 Equivalent Properties" ;
   rdfcv:constrainingElement :equivalent-properties ;
   rdfcv:leftProperties (<p1><p2><pn>).
+
+<constraintintance> a rdfcv:SimpleConstraint ;
+  dcterms:title "A.11 Literal Value Comparison" ;
+  #
+  #Problem:
+  # the object of constraining element is not fixed (so far I used that for my rules to trigger)
+  #Possible solutions:
+  # 1. Have a closed list of supported predicates and check for those
+  # 2. Add an extra triple indicating that we have a literal value comparison.
+  #
+  rdfcv:constrainingElement <mathematical-symbol> ; #predicate should be from <http://www.w3.org/2000/10/swap/math#>, <http://www.w3.org/2007/rif-builtin-function#> or <http://www.w3.org/2007/rif-builtin-predicate#>.
+  rdfcv:contextClass  <C_context> ;
+  rdfcv:leftProperties <p1> ;
+  rdfcv:rightProperties <p2> ;
+  rdfcv:classes <DT> .
+
