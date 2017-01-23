@@ -69,7 +69,7 @@
 <constraintintance> a rdfcv:SimpleConstraint ;
   dcterms:title "A.11 Literal Value Comparison" ;
   rdfcv:constrainingElement <mathematical-symbol> ; 
-  rdfs:comment "mathematical-symbol should be from <http://www.w3.org/2000/10/swap/math#>, <http://www.w3.org/2007/rif-builtin-function#> or <http://www.w3.org/2007/rif-builtin-predicate#>."
+  rdfs:comment "mathematical-symbol should be from <http://www.w3.org/2000/10/swap/math#>, <http://www.w3.org/2007/rif-builtin-function#> or <http://www.w3.org/2007/rif-builtin-predicate#>.";
   rdfcv:contextClass  <C_context> ;
   rdfcv:leftProperties <p1> ;
   rdfcv:rightProperties <p2> ;
@@ -101,3 +101,11 @@
   rdfcv:leftProperties <p> ;
   rdfcv:classes <C> .
 
+<constraintintance> a rdfcv:SimpleConstraint ;
+  dcterms:title "A.16 Data Property Facets" ;
+  rdfcv:constrainingElement <ce> ;
+  :ctype :DataPropertyFacets; #it is safer to add something like that here.
+  rdfs:comment "the constraining element can either be an xml shema constraining facet or a function which is supported by the reasoner used";
+  rdfcv:contextClass  <C_context> ;
+  rdfcv:leftProperties <p> ;
+  rdfcv:constrainingValue <cv> .
