@@ -17,15 +17,15 @@ PREFIX r: <http://www.w3.org/2000/10/swap/reason#>
   r:component <#lemma3>;
   r:component <#lemma4>;
   r:gives {
-    _:sk_1 a :constraintViolation.
-    _:sk_3 :violatedConstraint :example_constraint_A_6.
-    _:sk_5 :path (:Stephen_Hawking :authorOf :A-Brief-History-Of-Time :genre :Popular-Science).
-    _:sk_7 :chainedproperty :authorOfGenre.
+    _:sk_0 a :constraintViolation.
+    _:sk_0 :violatedConstraint :example_constraint_A_6.
+    _:sk_0 :path (:Stephen_Hawking :authorOf :A-Brief-History-Of-Time :genre :Popular-Science).
+    _:sk_0 :chainedproperty :authorOfGenre.
   }.
 
 <#lemma1> a r:Inference; 
   r:gives {
-    _:sk_1 a :constraintViolation.
+    _:sk_0 a :constraintViolation.
   }; 
   r:evidence (
     <#lemma5>
@@ -35,7 +35,7 @@ PREFIX r: <http://www.w3.org/2000/10/swap/reason#>
 
 <#lemma2> a r:Inference; 
   r:gives {
-    _:sk_3 :violatedConstraint :example_constraint_A_6.
+    _:sk_0 :violatedConstraint :example_constraint_A_6.
   }; 
   r:evidence (
     <#lemma5>
@@ -45,7 +45,7 @@ PREFIX r: <http://www.w3.org/2000/10/swap/reason#>
 
 <#lemma3> a r:Inference; 
   r:gives {
-    _:sk_5 :path (:Stephen_Hawking :authorOf :A-Brief-History-Of-Time :genre :Popular-Science).
+    _:sk_0 :path (:Stephen_Hawking :authorOf :A-Brief-History-Of-Time :genre :Popular-Science).
   }; 
   r:evidence (
     <#lemma5>
@@ -55,7 +55,7 @@ PREFIX r: <http://www.w3.org/2000/10/swap/reason#>
 
 <#lemma4> a r:Inference; 
   r:gives {
-    _:sk_7 :chainedproperty :authorOfGenre.
+    _:sk_0 :chainedproperty :authorOfGenre.
   }; 
   r:evidence (
     <#lemma5>
@@ -86,7 +86,7 @@ PREFIX r: <http://www.w3.org/2000/10/swap/reason#>
 <#lemma6> a r:Extraction; 
   r:gives {
     {?x_0_1 a :constraintViolation.
-      ?x_0_1 ?x_1_1 ?x_2_1} => {_:x_3_1 ?x_1_1 ?x_2_1}.
+      ?x_0_1 ?x_1_1 ?x_2_1} => {?x_0_1 ?x_1_1 ?x_2_1}.
   };
   r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/query.n3>].
 
@@ -181,6 +181,6 @@ PREFIX r: <http://www.w3.org/2000/10/swap/reason#>
   };
   r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/object_property_paths/rule.n3>].
 
-#2017-01-20T16:20:50.768Z in=11 out=4 ent=8 step=10 brake=4 inf=82844 sec=0.054 inf/sec=1534148
+#2017-01-20T16:52:31.043Z in=11 out=4 ent=8 step=10 brake=4 inf=82795 sec=0.078 inf/sec=1061474
 #ENDS
 
