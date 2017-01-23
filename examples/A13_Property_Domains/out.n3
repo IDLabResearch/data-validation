@@ -25,7 +25,7 @@ PREFIX r: <http://www.w3.org/2000/10/swap/reason#>
   r:component <#lemma5>;
   r:gives {
     _:sk_0 a :constraintViolation.
-    _:sk_0 :violatedConstraint :Publication.
+    _:sk_0 :violatedConstraint :example_constraint_A13.
     _:sk_0 :property :author.
     _:sk_0 :subject :Alices-Adventures-In-Wonderland.
     _:sk_0 :expectedDomain :Publication.
@@ -43,7 +43,7 @@ PREFIX r: <http://www.w3.org/2000/10/swap/reason#>
 
 <#lemma2> a r:Inference; 
   r:gives {
-    _:sk_0 :violatedConstraint :Publication.
+    _:sk_0 :violatedConstraint :example_constraint_A13.
   }; 
   r:evidence (
     <#lemma6>
@@ -84,7 +84,7 @@ PREFIX r: <http://www.w3.org/2000/10/swap/reason#>
 <#lemma6> a r:Inference; 
   r:gives {
     _:sk_0 a :constraintViolation.
-    _:sk_0 :violatedConstraint :Publication.
+    _:sk_0 :violatedConstraint :example_constraint_A13.
     _:sk_0 :property :author.
     _:sk_0 :subject :Alices-Adventures-In-Wonderland.
     _:sk_0 :expectedDomain :Publication.
@@ -108,25 +108,25 @@ PREFIX r: <http://www.w3.org/2000/10/swap/reason#>
 
 <#lemma8> a r:Extraction; 
   r:gives {
-    <http://example.com/constraintintance> a rdfcv:SimpleConstraint.
+    :example_constraint_A13 a rdfcv:SimpleConstraint.
   };
   r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A13_Property_Domains/constraint.ttl>].
 
 <#lemma9> a r:Extraction; 
   r:gives {
-    <http://example.com/constraintintance> rdfcv:constrainingElement :property-domain.
+    :example_constraint_A13 rdfcv:constrainingElement :property-domain.
   };
   r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A13_Property_Domains/constraint.ttl>].
 
 <#lemma10> a r:Extraction; 
   r:gives {
-    <http://example.com/constraintintance> rdfcv:leftProperties :author.
+    :example_constraint_A13 rdfcv:leftProperties :author.
   };
   r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A13_Property_Domains/constraint.ttl>].
 
 <#lemma11> a r:Extraction; 
   r:gives {
-    <http://example.com/constraintintance> rdfcv:classes :Publication.
+    :example_constraint_A13 rdfcv:classes :Publication.
   };
   r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A13_Property_Domains/constraint.ttl>].
 
@@ -144,13 +144,13 @@ PREFIX r: <http://www.w3.org/2000/10/swap/reason#>
       ?x_0_2 rdfcv:classes ?x_2_2.
       ?x_3_2 ?x_1_2 ?x_4_2.
       ?x_5_2 e:findall (1 {?x_3_2 a ?x_2_2} ())} => {_:x_6_2 a :constraintViolation.
-      _:x_6_2 :violatedConstraint ?x_2_2.
+      _:x_6_2 :violatedConstraint ?x_0_2.
       _:x_6_2 :property ?x_1_2.
       _:x_6_2 :subject ?x_3_2.
       _:x_6_2 :expectedDomain ?x_2_2}.
   };
   r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A13_Property_Domains/rule.n3>].
 
-#2017-01-23T16:27:21.925Z in=8 out=5 ent=10 step=12 brake=4 inf=65467 sec=0.071 inf/sec=922070
+#2017-01-23T16:44:30.310Z in=8 out=5 ent=10 step=12 brake=4 inf=66075 sec=0.074 inf/sec=892905
 #ENDS
 

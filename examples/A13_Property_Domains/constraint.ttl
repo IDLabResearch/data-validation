@@ -7,7 +7,7 @@
 @base <http://example.com/constraints#> .
 
 
-<constraintintance> a rdfcv:SimpleConstraint ;
+:example_constraint_A13 a rdfcv:SimpleConstraint ;
   dcterms:title "A.13 Property Domains" ;
   rdfcv:constrainingElement :property-domain ;
   rdfcv:leftProperties :author ;

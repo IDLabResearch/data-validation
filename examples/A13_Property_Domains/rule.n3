@@ -27,7 +27,7 @@ _:x e:findall (1 {?x a ?c} ()).
 =>
 {
 _:x a :constraintViolation;
-    :violatedConstraint ?c;
+    :violatedConstraint ?constraint;
     :property ?p;
     :subject ?x;
     :expectedDomain ?c.

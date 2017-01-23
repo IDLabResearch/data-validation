@@ -87,3 +87,9 @@
   rdfcv:leftProperties <p> ;
   rdfcv:classes <C> .
 
+<constraintintance> a rdfcv:SimpleConstraint ;
+  dcterms:title "A.14 Property Ranges" ;
+  rdfcv:constrainingElement :property-range ;
+  rdfcv:leftProperties <p> ;
+  rdfcv:classes <C> .
+
