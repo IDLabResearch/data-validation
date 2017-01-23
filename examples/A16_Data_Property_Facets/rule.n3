@@ -30,6 +30,7 @@
 {
 _:x a :constraintViolation;
     :violatedConstraint ?constraint;
+    :constrainingElement ?ce;
     :property ?p;
     :object ?a;
     :restriction ?cv.
