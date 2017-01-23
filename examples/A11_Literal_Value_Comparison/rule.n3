@@ -33,12 +33,13 @@ _:x e:findall (1 {?v1 ?x ?v2} ()).
 =>
 {
 _:x a :constraintViolation;
-    :violatedConstraint ?x;
+    :violatedConstraint ?constraint;
     :onResource ?s;
     :predicate1 ?p1;
     :predicate2 ?p2;
     :value1 ?v1;
-    :value2 ?v2
+    :value2 ?v2;
+    :violation ?x
 }.
 
 

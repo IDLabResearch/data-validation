@@ -81,3 +81,10 @@
   rdfcv:rightProperties <p2> ;
   rdfcv:classes <DT> .
 
+<constraintintance> a rdfcv:SimpleConstraint ;
+  dcterms:title "A.12 Value is Valid for Datatype" ;
+  rdfcv:constrainingElement :value-is-valid-for-datatype ;
+  rdfcv:contextClass  <C_context> ;
+  rdfcv:leftProperties <p> ;
+  rdfcv:classes <DT> .
+
