@@ -16,7 +16,6 @@
 
 {
 ?constraint a rdfcv:SimpleConstraint ;
-  dcterms:title "A.11 Literal Value Comparison" ;
   rdfcv:constrainingElement ?x ;
   rdfcv:contextClass  ?c1 ;
   rdfcv:leftProperties ?p1 ;
