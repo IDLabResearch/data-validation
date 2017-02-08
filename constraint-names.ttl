@@ -124,3 +124,13 @@
   rdfcv:contextClass  <C_context> ;
   rdfcv:leftProperties <p> ;
   rdfcv:constrainingValue <cv> .
+
+<constraintintance> a rdfcv:SimpleConstraint ;
+  :constraintType :LiteralRanges ; 
+  rdfs:comment  "Currently supported xsd:mininclusive and xsd:maxInclusive, more can be added";
+  dcterms:title "A.17 Literal Ranges" ;
+  rdfcv:constrainingElement <XSDConstrainingFacetsOnValues> ;
+  rdfcv:contextClass  <C_context> ;
+  rdfcv:leftProperties <p> ;
+  rdfcv:classes <DT> ;
+  rdfcv:constrainingValue <literal_range> .
