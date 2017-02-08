@@ -11,6 +11,7 @@
 
 {
 ?constraint a rdfcv:SimpleConstraint ;
+  :constraintType :ObjectPropertyPath ;
   rdfcv:constrainingElement :object-property-path ;
   rdfcv:leftProperties ?list ; 
   rdfcv:rightProperties ?property.

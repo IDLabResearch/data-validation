@@ -1,4 +1,4 @@
-#Processed by EYE rel. v17.0117.2134 josd
+#Processed by EYE rel. v17.0131.1345 josd
 #eye data.ttl constraint.ttl rule.n3 --query ../query.n3
 
 PREFIX rdfcv: <http://www.dr-thomashartmann.de/phd-thesis/rdf-validation/vocabularies/rdf-constraints-vocabulary#>
@@ -106,9 +106,10 @@ PREFIX r: <http://www.w3.org/2000/10/swap/reason#>
     <#lemma14>
     <#lemma15>
     <#lemma16>
+    <#lemma17>
     [ a r:Fact; r:gives {:Tom_Sawyer log:notEqualTo :Treasure_Island}]
   );
-  r:rule <#lemma17>.
+  r:rule <#lemma18>.
 
 <#lemma8> a r:Extraction; 
   r:gives {
@@ -121,53 +122,60 @@ PREFIX r: <http://www.w3.org/2000/10/swap/reason#>
   r:gives {
     :example_constraint_A_3 a rdfcv:SimpleConstraint.
   };
-  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/primary_key_properties/constraint.ttl>].
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A3_Primary_Key_Properties/constraint.ttl>].
 
 <#lemma10> a r:Extraction; 
   r:gives {
-    :example_constraint_A_3 rdfcv:constrainingElement :primary-key.
+    :example_constraint_A_3 :constraintType :PrimaryKeyProperty.
   };
-  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/primary_key_properties/constraint.ttl>].
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A3_Primary_Key_Properties/constraint.ttl>].
 
 <#lemma11> a r:Extraction; 
   r:gives {
-    :example_constraint_A_3 rdfcv:leftProperties :isbn.
+    :example_constraint_A_3 rdfcv:constrainingElement :primary-key.
   };
-  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/primary_key_properties/constraint.ttl>].
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A3_Primary_Key_Properties/constraint.ttl>].
 
 <#lemma12> a r:Extraction; 
   r:gives {
-    :example_constraint_A_3 rdfcv:contextClass :Book.
+    :example_constraint_A_3 rdfcv:leftProperties :isbn.
   };
-  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/primary_key_properties/constraint.ttl>].
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A3_Primary_Key_Properties/constraint.ttl>].
 
 <#lemma13> a r:Extraction; 
   r:gives {
-    :Tom_Sawyer a :Book.
+    :example_constraint_A_3 rdfcv:contextClass :Book.
   };
-  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/primary_key_properties/data.ttl>].
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A3_Primary_Key_Properties/constraint.ttl>].
 
 <#lemma14> a r:Extraction; 
   r:gives {
-    :Treasure_Island a :Book.
+    :Tom_Sawyer a :Book.
   };
-  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/primary_key_properties/data.ttl>].
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A3_Primary_Key_Properties/data.ttl>].
 
 <#lemma15> a r:Extraction; 
   r:gives {
-    :Tom_Sawyer :isbn "1234".
+    :Treasure_Island a :Book.
   };
-  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/primary_key_properties/data.ttl>].
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A3_Primary_Key_Properties/data.ttl>].
 
 <#lemma16> a r:Extraction; 
   r:gives {
-    :Treasure_Island :isbn "1234".
+    :Tom_Sawyer :isbn "1234".
   };
-  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/primary_key_properties/data.ttl>].
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A3_Primary_Key_Properties/data.ttl>].
 
 <#lemma17> a r:Extraction; 
   r:gives {
+    :Treasure_Island :isbn "1234".
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A3_Primary_Key_Properties/data.ttl>].
+
+<#lemma18> a r:Extraction; 
+  r:gives {
     {?x_0_2 a rdfcv:SimpleConstraint.
+      ?x_0_2 :constraintType :PrimaryKeyProperty.
       ?x_0_2 rdfcv:constrainingElement :primary-key.
       ?x_0_2 rdfcv:leftProperties ?x_1_2.
       ?x_0_2 rdfcv:contextClass ?x_2_2.
@@ -182,8 +190,8 @@ PREFIX r: <http://www.w3.org/2000/10/swap/reason#>
       _:x_6_2 :onProperty ?x_1_2.
       _:x_6_2 :object ?x_5_2}.
   };
-  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/primary_key_properties/rule.n3>].
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A3_Primary_Key_Properties/rule.n3>].
 
-#2017-01-20T16:57:40.299Z in=11 out=6 ent=12 step=16 brake=2 inf=68419 sec=0.070 inf/sec=977414
+#2017-02-08T13:38:20.613Z in=12 out=6 ent=12 step=16 brake=2 inf=70785 sec=0.078 inf/sec=907500
 #ENDS
 

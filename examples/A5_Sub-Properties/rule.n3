@@ -11,6 +11,7 @@
 
 {
 ?constraint a rdfcv:SimpleConstraint;
+  :constraintType :SubProperty ;
   rdfcv:constrainingElement :sub-property;
   rdfcv:leftProperties ?property1; 
   rdfcv:rightProperties ?property2.

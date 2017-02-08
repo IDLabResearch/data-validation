@@ -1,4 +1,4 @@
-#Processed by EYE rel. v17.0117.2134 josd
+#Processed by EYE rel. v17.0131.1345 josd
 #eye data.ttl constraint.ttl rule.n3 --query ../query.n3
 
 PREFIX rdfcv: <http://www.dr-thomashartmann.de/phd-thesis/rdf-validation/vocabularies/rdf-constraints-vocabulary#>
@@ -157,7 +157,7 @@ PREFIX r: <http://www.w3.org/2000/10/swap/reason#>
 
 <#lemma12> a r:Extraction; 
   r:gives {
-    :example_constraint_A_11 dcterms:title "A.11 Literal Value Comparison".
+    :example_constraint_A_11 :constraintType :LiteralValueComparison.
   };
   r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A11_Literal_Value_Comparison/constraint.ttl>].
 
@@ -221,7 +221,7 @@ PREFIX r: <http://www.w3.org/2000/10/swap/reason#>
 <#lemma22> a r:Extraction; 
   r:gives {
     {?x_0_2 a rdfcv:SimpleConstraint.
-      ?x_0_2 dcterms:title "A.11 Literal Value Comparison".
+      ?x_0_2 :constraintType :LiteralValueComparison.
       ?x_0_2 rdfcv:constrainingElement ?x_1_2.
       ?x_0_2 rdfcv:contextClass ?x_2_2.
       ?x_0_2 rdfcv:leftProperties ?x_3_2.
@@ -248,6 +248,6 @@ PREFIX r: <http://www.w3.org/2000/10/swap/reason#>
   };
   r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A11_Literal_Value_Comparison/rule.n3>].
 
-#2017-01-23T11:12:29.666Z in=13 out=8 ent=16 step=18 brake=4 inf=160455 sec=0.065 inf/sec=2468538
+#2017-02-08T13:51:03.332Z in=14 out=8 ent=16 step=18 brake=4 inf=162134 sec=0.105 inf/sec=1544133
 #ENDS
 

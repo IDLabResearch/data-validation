@@ -11,6 +11,7 @@
 
 {
 ?constraint a rdfcv:SimpleConstraint;
+  :constraintType :InverseFunctionalProperties ;
   rdfcv:constrainingElement :inverse-functional-properties;
   rdfcv:leftProperties ?list ;
   rdfcv:contextClass  ?class.

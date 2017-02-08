@@ -16,6 +16,7 @@
 
 {
 ?constraint a rdfcv:SimpleConstraint ;
+  :constraintType :LiteralValueComparison ;
   rdfcv:constrainingElement ?x ;
   rdfcv:contextClass  ?c1 ;
   rdfcv:leftProperties ?p1 ;

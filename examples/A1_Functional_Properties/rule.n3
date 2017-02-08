@@ -10,6 +10,7 @@
  
 {
   ?constraint a rdfcv:SimpleConstraint;
+  :constraintType :FunctionalProperties ;
   rdfcv:constrainingElement :functional-properties;
   rdfcv:leftProperties ?list ;
   rdfcv:contextClass  ?class.

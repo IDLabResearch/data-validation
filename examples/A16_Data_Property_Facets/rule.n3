@@ -18,7 +18,7 @@
 {
 ?constraint a rdfcv:SimpleConstraint ;
   rdfcv:constrainingElement ?ce ;
-  :ctype :DataPropertyFacets;
+  :constraintType :DataPropertyFacets ; 
   rdfcv:contextClass  ?c ;
   rdfcv:leftProperties ?p ;
   rdfcv:constrainingValue ?cv. 

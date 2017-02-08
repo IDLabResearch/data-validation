@@ -11,6 +11,7 @@
 
 {
 ?constraint a rdfcv:SimpleConstraint ;
+  :constraintType :EquivalentProperties ;
   rdfcv:constrainingElement :equivalent-properties ;
   rdfcv:leftProperties ?list.
 ?p list:in ?list.

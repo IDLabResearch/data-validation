@@ -11,6 +11,7 @@
 
 {
 ?constraint a rdfcv:SimpleConstraint ;
+  :constraintType :NotAllowedValues ;
   rdfcv:constrainingElement :not-allowed-values ;
   rdfcv:contextClass  ?class ;
   rdfcv:leftProperties ?property; 

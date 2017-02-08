@@ -17,6 +17,7 @@
 
 {
 ?constraint a rdfcv:SimpleConstraint ;
+  :constraintType :PropertyDomain ;
   rdfcv:constrainingElement :property-domain ;
   rdfcv:leftProperties ?p ;
   rdfcv:classes ?c .

@@ -6,6 +6,7 @@
 
 
 :example_constraint_A_6 a rdfcv:SimpleConstraint ;
+  :constraintType :ObjectPropertyPath ;
   dcterms:title "A.6 Object Property Path" ;
   rdfcv:constrainingElement :object-property-path ;
   rdfcv:leftProperties ( :authorOf :genre ) ; 

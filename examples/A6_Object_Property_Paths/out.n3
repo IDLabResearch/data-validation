@@ -1,4 +1,4 @@
-#Processed by EYE rel. v17.0117.2134 josd
+#Processed by EYE rel. v17.0131.1345 josd
 #eye data.ttl constraint.ttl rule.n3 --query ../query.n3
 
 PREFIX rdfcv: <http://www.dr-thomashartmann.de/phd-thesis/rdf-validation/vocabularies/rdf-constraints-vocabulary#>
@@ -75,13 +75,14 @@ PREFIX r: <http://www.w3.org/2000/10/swap/reason#>
     <#lemma8>
     <#lemma9>
     <#lemma10>
-    [ a r:Fact; r:gives {(:authorOf :genre) rdf:first :authorOf}]
     <#lemma11>
-    [ a r:Fact; r:gives {(:authorOf :genre) rdf:rest (:genre)}]
+    [ a r:Fact; r:gives {(:authorOf :genre) rdf:first :authorOf}]
     <#lemma12>
-    [ a r:Fact; r:gives {((<file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/object_property_paths/data.ttl> <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/object_property_paths/constraint.ttl> <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/object_property_paths/rule.n3>) 1) e:findall (1 {:Stephen_Hawking :authorOfGenre :Popular-Science} ())}]
+    [ a r:Fact; r:gives {(:authorOf :genre) rdf:rest (:genre)}]
+    <#lemma13>
+    [ a r:Fact; r:gives {((<file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A6_Object_Property_Paths/data.ttl> <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A6_Object_Property_Paths/constraint.ttl> <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A6_Object_Property_Paths/rule.n3>) 1) e:findall (1 {:Stephen_Hawking :authorOfGenre :Popular-Science} ())}]
   );
-  r:rule <#lemma13>.
+  r:rule <#lemma14>.
 
 <#lemma6> a r:Extraction; 
   r:gives {
@@ -94,48 +95,55 @@ PREFIX r: <http://www.w3.org/2000/10/swap/reason#>
   r:gives {
     :example_constraint_A_6 a rdfcv:SimpleConstraint.
   };
-  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/object_property_paths/constraint.ttl>].
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A6_Object_Property_Paths/constraint.ttl>].
 
 <#lemma8> a r:Extraction; 
   r:gives {
-    :example_constraint_A_6 rdfcv:constrainingElement :object-property-path.
+    :example_constraint_A_6 :constraintType :ObjectPropertyPath.
   };
-  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/object_property_paths/constraint.ttl>].
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A6_Object_Property_Paths/constraint.ttl>].
 
 <#lemma9> a r:Extraction; 
   r:gives {
-    :example_constraint_A_6 rdfcv:leftProperties (:authorOf :genre).
+    :example_constraint_A_6 rdfcv:constrainingElement :object-property-path.
   };
-  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/object_property_paths/constraint.ttl>].
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A6_Object_Property_Paths/constraint.ttl>].
 
 <#lemma10> a r:Extraction; 
   r:gives {
-    :example_constraint_A_6 rdfcv:rightProperties :authorOfGenre.
+    :example_constraint_A_6 rdfcv:leftProperties (:authorOf :genre).
   };
-  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/object_property_paths/constraint.ttl>].
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A6_Object_Property_Paths/constraint.ttl>].
 
 <#lemma11> a r:Extraction; 
   r:gives {
+    :example_constraint_A_6 rdfcv:rightProperties :authorOfGenre.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A6_Object_Property_Paths/constraint.ttl>].
+
+<#lemma12> a r:Extraction; 
+  r:gives {
     :Stephen_Hawking :authorOf :A-Brief-History-Of-Time.
   };
-  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/object_property_paths/data.ttl>].
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A6_Object_Property_Paths/data.ttl>].
 
-<#lemma12> a r:Inference; 
+<#lemma13> a r:Inference; 
   r:gives {
     (:A-Brief-History-Of-Time (:genre) (:Stephen_Hawking :authorOf :A-Brief-History-Of-Time)) :propertyPath (:Popular-Science (:Stephen_Hawking :authorOf :A-Brief-History-Of-Time :genre :Popular-Science)).
   }; 
   r:evidence (
     [ a r:Fact; r:gives {(:genre) rdf:first :genre}]
-    <#lemma14>
+    <#lemma15>
     [ a r:Fact; r:gives {((:Stephen_Hawking :authorOf :A-Brief-History-Of-Time) (:genre :Popular-Science)) list:append (:Stephen_Hawking :authorOf :A-Brief-History-Of-Time :genre :Popular-Science)}]
     [ a r:Fact; r:gives {(:genre) rdf:rest ()}]
-    <#lemma15>
+    <#lemma16>
   );
-  r:rule <#lemma16>.
+  r:rule <#lemma17>.
 
-<#lemma13> a r:Extraction; 
+<#lemma14> a r:Extraction; 
   r:gives {
     {?x_0_2 a rdfcv:SimpleConstraint.
+      ?x_0_2 :constraintType :ObjectPropertyPath.
       ?x_0_2 rdfcv:constrainingElement :object-property-path.
       ?x_0_2 rdfcv:leftProperties ?x_1_2.
       ?x_0_2 rdfcv:rightProperties ?x_2_2.
@@ -148,24 +156,24 @@ PREFIX r: <http://www.w3.org/2000/10/swap/reason#>
       _:x_10_2 :path ?x_8_2.
       _:x_10_2 :chainedproperty ?x_2_2}.
   };
-  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/object_property_paths/rule.n3>].
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A6_Object_Property_Paths/rule.n3>].
 
-<#lemma14> a r:Extraction; 
+<#lemma15> a r:Extraction; 
   r:gives {
     :A-Brief-History-Of-Time :genre :Popular-Science.
   };
-  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/object_property_paths/data.ttl>].
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A6_Object_Property_Paths/data.ttl>].
 
-<#lemma15> a r:Inference; 
+<#lemma16> a r:Inference; 
   r:gives {
     (:Popular-Science () (:Stephen_Hawking :authorOf :A-Brief-History-Of-Time :genre :Popular-Science)) :propertyPath (:Popular-Science (:Stephen_Hawking :authorOf :A-Brief-History-Of-Time :genre :Popular-Science)).
   }; 
   r:evidence (
     [ a r:Fact; r:gives true]
   );
-  r:rule <#lemma17>.
+  r:rule <#lemma18>.
 
-<#lemma16> a r:Extraction; 
+<#lemma17> a r:Extraction; 
   r:gives {
     {(?x_2_3 ?x_0_3 ?x_4_3) :propertyPath (?x_7_3 ?x_8_3)} <= {?x_0_3 rdf:first ?x_1_3.
       ?x_2_3 ?x_1_3 ?x_3_3.
@@ -173,14 +181,14 @@ PREFIX r: <http://www.w3.org/2000/10/swap/reason#>
       ?x_0_3 rdf:rest ?x_6_3.
       (?x_3_3 ?x_6_3 ?x_5_3) :propertyPath (?x_7_3 ?x_8_3)}.
   };
-  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/object_property_paths/rule.n3>].
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A6_Object_Property_Paths/rule.n3>].
 
-<#lemma17> a r:Extraction; 
+<#lemma18> a r:Extraction; 
   r:gives {
     {(?x_0_4 () ?x_1_4) :propertyPath (?x_0_4 ?x_1_4)} <= true.
   };
-  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/object_property_paths/rule.n3>].
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A6_Object_Property_Paths/rule.n3>].
 
-#2017-01-20T16:52:31.043Z in=11 out=4 ent=8 step=10 brake=4 inf=82795 sec=0.078 inf/sec=1061474
+#2017-02-08T13:42:44.559Z in=12 out=4 ent=8 step=10 brake=4 inf=85085 sec=0.090 inf/sec=945389
 #ENDS
 

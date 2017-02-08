@@ -1,4 +1,4 @@
-#Processed by EYE rel. v17.0117.2134 josd
+#Processed by EYE rel. v17.0131.1345 josd
 #eye data.ttl constraint.ttl rule.n3 --query ../query.n3
 
 PREFIX rdfcv: <http://www.dr-thomashartmann.de/phd-thesis/rdf-validation/vocabularies/rdf-constraints-vocabulary#>
@@ -230,7 +230,7 @@ PREFIX r: <http://www.w3.org/2000/10/swap/reason#>
 
 <#lemma18> a r:Extraction; 
   r:gives {
-    :example_constraint_A16 :ctype :DataPropertyFacets.
+    :example_constraint_A16 :constraintType :DataPropertyFacets.
   };
   r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A16_Data_Property_Facets/constraint.ttl>].
 
@@ -279,7 +279,7 @@ PREFIX r: <http://www.w3.org/2000/10/swap/reason#>
   r:gives {
     {?x_0_2 a rdfcv:SimpleConstraint.
       ?x_0_2 rdfcv:constrainingElement ?x_1_2.
-      ?x_0_2 :ctype :DataPropertyFacets.
+      ?x_0_2 :constraintType :DataPropertyFacets.
       ?x_0_2 rdfcv:contextClass ?x_2_2.
       ?x_0_2 rdfcv:leftProperties ?x_3_2.
       ?x_0_2 rdfcv:constrainingValue ?x_4_2.
@@ -308,7 +308,7 @@ PREFIX r: <http://www.w3.org/2000/10/swap/reason#>
 
 <#lemma28> a r:Extraction; 
   r:gives {
-    :example_constraint_A16a :ctype :DataPropertyFacets.
+    :example_constraint_A16a :constraintType :DataPropertyFacets.
   };
   r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A16_Data_Property_Facets/constraint.ttl>].
 
@@ -359,6 +359,6 @@ PREFIX r: <http://www.w3.org/2000/10/swap/reason#>
   };
   r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A16_Data_Property_Facets/rule.n3>].
 
-#2017-01-23T18:27:16.313Z in=22 out=12 ent=24 step=28 brake=2 inf=101169 sec=0.091 inf/sec=1111747
+#2017-02-08T14:00:03.575Z in=22 out=12 ent=24 step=28 brake=2 inf=101233 sec=0.088 inf/sec=1150375
 #ENDS
 

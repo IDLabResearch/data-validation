@@ -1,4 +1,4 @@
-#Processed by EYE rel. v17.0117.2134 josd
+#Processed by EYE rel. v17.0131.1345 josd
 #eye data.ttl constraint.ttl rule.n3 --query ../query.n3
 
 PREFIX rdfcv: <http://www.dr-thomashartmann.de/phd-thesis/rdf-validation/vocabularies/rdf-constraints-vocabulary#>
@@ -92,9 +92,10 @@ PREFIX r: <http://www.w3.org/2000/10/swap/reason#>
     <#lemma12>
     <#lemma13>
     <#lemma14>
-    [ a r:Fact; r:gives {((<file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/allowed_values/data.ttl> <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/allowed_values/constraint.ttl> <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/allowed_values/rule.n3>) 1) e:findall (1 {:Fiction list:in (:Computer-Science :Informatics)} ())}]
+    <#lemma15>
+    [ a r:Fact; r:gives {((<file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A7_Allowed_Values/data.ttl> <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A7_Allowed_Values/constraint.ttl> <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A7_Allowed_Values/rule.n3>) 1) e:findall (1 {:Fiction list:in (:Computer-Science :Informatics)} ())}]
   );
-  r:rule <#lemma15>.
+  r:rule <#lemma16>.
 
 <#lemma7> a r:Extraction; 
   r:gives {
@@ -107,47 +108,54 @@ PREFIX r: <http://www.w3.org/2000/10/swap/reason#>
   r:gives {
     :example_constraint_A_7 a rdfcv:SimpleConstraint.
   };
-  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/allowed_values/constraint.ttl>].
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A7_Allowed_Values/constraint.ttl>].
 
 <#lemma9> a r:Extraction; 
   r:gives {
-    :example_constraint_A_7 rdfcv:constrainingElement :allowed-values.
+    :example_constraint_A_7 :constraintType :AllowedValues.
   };
-  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/allowed_values/constraint.ttl>].
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A7_Allowed_Values/constraint.ttl>].
 
 <#lemma10> a r:Extraction; 
   r:gives {
-    :example_constraint_A_7 rdfcv:contextClass :Computer-Science-Book.
+    :example_constraint_A_7 rdfcv:constrainingElement :allowed-values.
   };
-  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/allowed_values/constraint.ttl>].
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A7_Allowed_Values/constraint.ttl>].
 
 <#lemma11> a r:Extraction; 
   r:gives {
-    :example_constraint_A_7 rdfcv:leftProperties :subject.
+    :example_constraint_A_7 rdfcv:contextClass :Computer-Science-Book.
   };
-  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/allowed_values/constraint.ttl>].
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A7_Allowed_Values/constraint.ttl>].
 
 <#lemma12> a r:Extraction; 
   r:gives {
-    :example_constraint_A_7 rdfcv:classes (:Computer-Science :Informatics).
+    :example_constraint_A_7 rdfcv:leftProperties :subject.
   };
-  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/allowed_values/constraint.ttl>].
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A7_Allowed_Values/constraint.ttl>].
 
 <#lemma13> a r:Extraction; 
   r:gives {
-    :Tom_Sawyer a :Computer-Science-Book.
+    :example_constraint_A_7 rdfcv:classes (:Computer-Science :Informatics).
   };
-  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/allowed_values/data.ttl>].
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A7_Allowed_Values/constraint.ttl>].
 
 <#lemma14> a r:Extraction; 
   r:gives {
-    :Tom_Sawyer :subject :Fiction.
+    :Tom_Sawyer a :Computer-Science-Book.
   };
-  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/allowed_values/data.ttl>].
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A7_Allowed_Values/data.ttl>].
 
 <#lemma15> a r:Extraction; 
   r:gives {
+    :Tom_Sawyer :subject :Fiction.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A7_Allowed_Values/data.ttl>].
+
+<#lemma16> a r:Extraction; 
+  r:gives {
     {?x_0_2 a rdfcv:SimpleConstraint.
+      ?x_0_2 :constraintType :AllowedValues.
       ?x_0_2 rdfcv:constrainingElement :allowed-values.
       ?x_0_2 rdfcv:contextClass ?x_1_2.
       ?x_0_2 rdfcv:leftProperties ?x_2_2.
@@ -160,8 +168,8 @@ PREFIX r: <http://www.w3.org/2000/10/swap/reason#>
       _:x_7_2 :object ?x_5_2.
       _:x_7_2 :onProperty ?x_2_2}.
   };
-  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/allowed_values/rule.n3>].
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A7_Allowed_Values/rule.n3>].
 
-#2017-01-20T17:23:25.979Z in=9 out=5 ent=10 step=12 brake=4 inf=66141 sec=0.071 inf/sec=931563
+#2017-02-08T13:43:53.674Z in=10 out=5 ent=10 step=12 brake=4 inf=68370 sec=0.047 inf/sec=1454681
 #ENDS
 

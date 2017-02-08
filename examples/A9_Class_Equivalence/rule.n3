@@ -11,7 +11,7 @@
 
 {
 ?constraint a rdfcv:SimpleConstraint ;
-  dcterms:title "A.9 Class Equivalence" ;
+  :constraintType :ClassEquivalence ;
   rdfcv:constrainingElement :equivalent-classes ;
   rdfcv:contextClass  ?class1 ;
   rdfcv:classes ?class2 .
@@ -29,7 +29,7 @@ _:x a :constraintViolation;
 
 {
 ?constraint a rdfcv:SimpleConstraint ;
-  dcterms:title "A.9 Class Equivalence" ;
+  :constraintType :ClassEquivalence ;
   rdfcv:constrainingElement :equivalent-classes ;
   rdfcv:contextClass  ?class1 ;
   rdfcv:classes ?class2 .

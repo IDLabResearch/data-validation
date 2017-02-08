@@ -1,4 +1,4 @@
-#Processed by EYE rel. v17.0117.2134 josd
+#Processed by EYE rel. v17.0131.1345 josd
 #eye data.ttl constraint.ttl rule.n3 --query ../query.n3
 
 PREFIX rdfcv: <http://www.dr-thomashartmann.de/phd-thesis/rdf-validation/vocabularies/rdf-constraints-vocabulary#>
@@ -110,9 +110,10 @@ PREFIX r: <http://www.w3.org/2000/10/swap/reason#>
     <#lemma13>
     <#lemma14>
     <#lemma15>
+    <#lemma16>
     [ a r:Fact; r:gives {((<file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A15_Class-Specific_Property_Range/data.ttl> <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A15_Class-Specific_Property_Range/constraint.ttl> <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A15_Class-Specific_Property_Range/rule.n3>) 1) e:findall (1 {:Lewis-Carroll a :Person} ())}]
   );
-  r:rule <#lemma16>.
+  r:rule <#lemma17>.
 
 <#lemma8> a r:Extraction; 
   r:gives {
@@ -129,43 +130,50 @@ PREFIX r: <http://www.w3.org/2000/10/swap/reason#>
 
 <#lemma10> a r:Extraction; 
   r:gives {
-    :example_constraint_A15 rdfcv:constrainingElement :property-range.
+    :example_constraint_A15 :constraintType :ClassSpecificPropertyRange.
   };
   r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A15_Class-Specific_Property_Range/constraint.ttl>].
 
 <#lemma11> a r:Extraction; 
   r:gives {
-    :example_constraint_A15 rdfcv:contextClass :Book.
+    :example_constraint_A15 rdfcv:constrainingElement :property-range.
   };
   r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A15_Class-Specific_Property_Range/constraint.ttl>].
 
 <#lemma12> a r:Extraction; 
   r:gives {
-    :example_constraint_A15 rdfcv:leftProperties :author.
+    :example_constraint_A15 rdfcv:contextClass :Book.
   };
   r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A15_Class-Specific_Property_Range/constraint.ttl>].
 
 <#lemma13> a r:Extraction; 
   r:gives {
-    :example_constraint_A15 rdfcv:classes :Person.
+    :example_constraint_A15 rdfcv:leftProperties :author.
   };
   r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A15_Class-Specific_Property_Range/constraint.ttl>].
 
 <#lemma14> a r:Extraction; 
   r:gives {
-    :Alices-Adventures-In-Wonderland :author :Lewis-Carroll.
+    :example_constraint_A15 rdfcv:classes :Person.
   };
-  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A15_Class-Specific_Property_Range/data.ttl>].
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A15_Class-Specific_Property_Range/constraint.ttl>].
 
 <#lemma15> a r:Extraction; 
   r:gives {
-    :Alices-Adventures-In-Wonderland a :Book.
+    :Alices-Adventures-In-Wonderland :author :Lewis-Carroll.
   };
   r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A15_Class-Specific_Property_Range/data.ttl>].
 
 <#lemma16> a r:Extraction; 
   r:gives {
+    :Alices-Adventures-In-Wonderland a :Book.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A15_Class-Specific_Property_Range/data.ttl>].
+
+<#lemma17> a r:Extraction; 
+  r:gives {
     {?x_0_2 a rdfcv:SimpleConstraint.
+      ?x_0_2 :constraintType :ClassSpecificPropertyRange.
       ?x_0_2 rdfcv:constrainingElement :property-range.
       ?x_0_2 rdfcv:contextClass ?x_1_2.
       ?x_0_2 rdfcv:leftProperties ?x_2_2.
@@ -181,6 +189,6 @@ PREFIX r: <http://www.w3.org/2000/10/swap/reason#>
   };
   r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A15_Class-Specific_Property_Range/rule.n3>].
 
-#2017-01-23T17:20:50.846Z in=10 out=6 ent=12 step=14 brake=4 inf=72272 sec=0.076 inf/sec=950947
+#2017-02-08T13:58:31.276Z in=11 out=6 ent=12 step=14 brake=4 inf=74708 sec=0.080 inf/sec=933850
 #ENDS
 

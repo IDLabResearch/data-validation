@@ -5,6 +5,7 @@
 @base <http://example.com/constraints#> .
 
 :example_constraint_A_5 a rdfcv:SimpleConstraint ;
+  :constraintType :SubProperty ;
   dcterms:title "A.5 Sub-Properties" ;
   rdfcv:constrainingElement :sub-property ;
   rdfcv:leftProperties :editor; 

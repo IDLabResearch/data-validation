@@ -11,6 +11,7 @@
 
 {
 ?constraint a rdfcv:SimpleConstraint;
+  :constraintType :Subsumption ;
   rdfcv:constrainingElement :sub-class;
   rdfcv:contextClass  ?class1;
   rdfcv:classes ?class2.

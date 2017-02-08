@@ -1,4 +1,4 @@
-#Processed by EYE rel. v17.0117.2134 josd
+#Processed by EYE rel. v17.0131.1345 josd
 #eye data.ttl constraint.ttl rule.n3 --query ../query.n3
 
 PREFIX rdfcv: <http://www.dr-thomashartmann.de/phd-thesis/rdf-validation/vocabularies/rdf-constraints-vocabulary#>
@@ -220,53 +220,53 @@ PREFIX r: <http://www.w3.org/2000/10/swap/reason#>
   r:gives {
     :example_constraint_A12 a rdfcv:SimpleConstraint.
   };
-  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A12_Values_is_Valid_for_Datatype/constraint.ttl>].
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A12_Value_is_Valid_for_Datatype/constraint.ttl>].
 
 <#lemma17> a r:Extraction; 
   r:gives {
-    :example_constraint_A12 dcterms:title "A.12 Value is Valid for Datatype".
+    :example_constraint_A12 :constraintType :ValueIsValidForDatatype.
   };
-  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A12_Values_is_Valid_for_Datatype/constraint.ttl>].
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A12_Value_is_Valid_for_Datatype/constraint.ttl>].
 
 <#lemma18> a r:Extraction; 
   r:gives {
     :example_constraint_A12 rdfcv:constrainingElement :value-is-valid-for-datatype.
   };
-  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A12_Values_is_Valid_for_Datatype/constraint.ttl>].
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A12_Value_is_Valid_for_Datatype/constraint.ttl>].
 
 <#lemma19> a r:Extraction; 
   r:gives {
     :example_constraint_A12 rdfcv:contextClass :Publication.
   };
-  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A12_Values_is_Valid_for_Datatype/constraint.ttl>].
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A12_Value_is_Valid_for_Datatype/constraint.ttl>].
 
 <#lemma20> a r:Extraction; 
   r:gives {
     :example_constraint_A12 rdfcv:leftProperties :numberPages.
   };
-  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A12_Values_is_Valid_for_Datatype/constraint.ttl>].
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A12_Value_is_Valid_for_Datatype/constraint.ttl>].
 
 <#lemma21> a r:Extraction; 
   r:gives {
     :example_constraint_A12 rdfcv:classes xsd:nonNegativeInteger.
   };
-  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A12_Values_is_Valid_for_Datatype/constraint.ttl>].
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A12_Value_is_Valid_for_Datatype/constraint.ttl>].
 
 <#lemma22> a r:Extraction; 
   r:gives {
     :Tom_Sawyer a :Publication.
   };
-  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A12_Values_is_Valid_for_Datatype/data.ttl>].
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A12_Value_is_Valid_for_Datatype/data.ttl>].
 
 <#lemma23> a r:Extraction; 
   r:gives {
     :Tom_Sawyer :numberPages -4.9 .
   };
-  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A12_Values_is_Valid_for_Datatype/data.ttl>].
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A12_Value_is_Valid_for_Datatype/data.ttl>].
 
 <#lemma24> a r:Inference; 
   r:gives {
-    -4.9 e:clashesWith xsd:nonNegativeInteger.
+    -4.9 :clashesWith xsd:nonNegativeInteger.
   }; 
   r:evidence (
     [ a r:Fact; r:gives {-4.9 math:lessThan 0}]
@@ -276,67 +276,67 @@ PREFIX r: <http://www.w3.org/2000/10/swap/reason#>
 <#lemma25> a r:Extraction; 
   r:gives {
     {?x_0_2 a rdfcv:SimpleConstraint.
-      ?x_0_2 dcterms:title "A.12 Value is Valid for Datatype".
+      ?x_0_2 :constraintType :ValueIsValidForDatatype.
       ?x_0_2 rdfcv:constrainingElement :value-is-valid-for-datatype.
       ?x_0_2 rdfcv:contextClass ?x_1_2.
       ?x_0_2 rdfcv:leftProperties ?x_2_2.
       ?x_0_2 rdfcv:classes ?x_3_2.
       ?x_4_2 a ?x_1_2.
       ?x_4_2 ?x_2_2 ?x_5_2.
-      ?x_5_2 e:clashesWith ?x_3_2} => {_:x_6_2 a :constraintViolation.
+      ?x_5_2 :clashesWith ?x_3_2} => {_:x_6_2 a :constraintViolation.
       _:x_6_2 :violatedConstraint ?x_1_2.
       _:x_6_2 :subject ?x_4_2.
       _:x_6_2 :property ?x_2_2.
       _:x_6_2 :value ?x_5_2.
       _:x_6_2 :datatype ?x_3_2}.
   };
-  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A12_Values_is_Valid_for_Datatype/rule.n3>].
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A12_Value_is_Valid_for_Datatype/rule.n3>].
 
 <#lemma26> a r:Extraction; 
   r:gives {
     :example_constraint_A12a a rdfcv:SimpleConstraint.
   };
-  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A12_Values_is_Valid_for_Datatype/constraint.ttl>].
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A12_Value_is_Valid_for_Datatype/constraint.ttl>].
 
 <#lemma27> a r:Extraction; 
   r:gives {
-    :example_constraint_A12a dcterms:title "A.12 Value is Valid for Datatype".
+    :example_constraint_A12a :constraintType :ValueIsValidForDatatype.
   };
-  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A12_Values_is_Valid_for_Datatype/constraint.ttl>].
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A12_Value_is_Valid_for_Datatype/constraint.ttl>].
 
 <#lemma28> a r:Extraction; 
   r:gives {
     :example_constraint_A12a rdfcv:constrainingElement :value-is-valid-for-datatype.
   };
-  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A12_Values_is_Valid_for_Datatype/constraint.ttl>].
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A12_Value_is_Valid_for_Datatype/constraint.ttl>].
 
 <#lemma29> a r:Extraction; 
   r:gives {
     :example_constraint_A12a rdfcv:contextClass :Publication.
   };
-  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A12_Values_is_Valid_for_Datatype/constraint.ttl>].
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A12_Value_is_Valid_for_Datatype/constraint.ttl>].
 
 <#lemma30> a r:Extraction; 
   r:gives {
     :example_constraint_A12a rdfcv:leftProperties :publishedAt.
   };
-  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A12_Values_is_Valid_for_Datatype/constraint.ttl>].
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A12_Value_is_Valid_for_Datatype/constraint.ttl>].
 
 <#lemma31> a r:Extraction; 
   r:gives {
     :example_constraint_A12a rdfcv:classes xsd:date.
   };
-  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A12_Values_is_Valid_for_Datatype/constraint.ttl>].
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A12_Value_is_Valid_for_Datatype/constraint.ttl>].
 
 <#lemma32> a r:Extraction; 
   r:gives {
     :Tom_Sawyer :publishedAt "u"^^xsd:date.
   };
-  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A12_Values_is_Valid_for_Datatype/data.ttl>].
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A12_Value_is_Valid_for_Datatype/data.ttl>].
 
 <#lemma33> a r:Inference; 
   r:gives {
-    "u"^^xsd:date e:clashesWith xsd:date.
+    "u"^^xsd:date :clashesWith xsd:date.
   }; 
   r:evidence (
     [ a r:Fact; r:gives true]
@@ -345,16 +345,16 @@ PREFIX r: <http://www.w3.org/2000/10/swap/reason#>
 
 <#lemma34> a r:Extraction; 
   r:gives {
-    {?x_0_3 e:clashesWith xsd:nonNegativeInteger} <= {?x_0_3 math:lessThan 0}.
+    {?x_0_3 :clashesWith xsd:nonNegativeInteger} <= {?x_0_3 math:lessThan 0}.
   };
-  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A12_Values_is_Valid_for_Datatype/rule.n3>].
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A12_Value_is_Valid_for_Datatype/rule.n3>].
 
 <#lemma35> a r:Extraction; 
   r:gives {
-    {?x_0_4 e:clashesWith xsd:date} <= true.
+    {?x_0_4 :clashesWith xsd:date} <= true.
   };
-  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A12_Values_is_Valid_for_Datatype/rule.n3>].
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A12_Value_is_Valid_for_Datatype/rule.n3>].
 
-#2017-01-23T15:52:12.505Z in=23 out=12 ent=24 step=30 brake=2 inf=103093 sec=0.085 inf/sec=1212859
+#2017-02-08T13:53:42.567Z in=25 out=12 ent=24 step=30 brake=2 inf=103703 sec=0.088 inf/sec=1178443
 #ENDS
 

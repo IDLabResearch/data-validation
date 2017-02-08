@@ -1,4 +1,4 @@
-#Processed by EYE rel. v17.0117.2134 josd
+#Processed by EYE rel. v17.0131.1345 josd
 #eye data.ttl constraint.ttl rule.n3 --query ../query.n3
 
 PREFIX rdfcv: <http://www.dr-thomashartmann.de/phd-thesis/rdf-validation/vocabularies/rdf-constraints-vocabulary#>
@@ -95,9 +95,10 @@ PREFIX r: <http://www.w3.org/2000/10/swap/reason#>
     <#lemma10>
     <#lemma11>
     <#lemma12>
+    <#lemma13>
     [ a r:Fact; r:gives {((<file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A13_Property_Domains/data.ttl> <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A13_Property_Domains/constraint.ttl> <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A13_Property_Domains/rule.n3>) 1) e:findall (1 {:Alices-Adventures-In-Wonderland a :Publication} ())}]
   );
-  r:rule <#lemma13>.
+  r:rule <#lemma14>.
 
 <#lemma7> a r:Extraction; 
   r:gives {
@@ -114,31 +115,38 @@ PREFIX r: <http://www.w3.org/2000/10/swap/reason#>
 
 <#lemma9> a r:Extraction; 
   r:gives {
-    :example_constraint_A13 rdfcv:constrainingElement :property-domain.
+    :example_constraint_A13 :constraintType :PropertyDomain.
   };
   r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A13_Property_Domains/constraint.ttl>].
 
 <#lemma10> a r:Extraction; 
   r:gives {
-    :example_constraint_A13 rdfcv:leftProperties :author.
+    :example_constraint_A13 rdfcv:constrainingElement :property-domain.
   };
   r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A13_Property_Domains/constraint.ttl>].
 
 <#lemma11> a r:Extraction; 
   r:gives {
-    :example_constraint_A13 rdfcv:classes :Publication.
+    :example_constraint_A13 rdfcv:leftProperties :author.
   };
   r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A13_Property_Domains/constraint.ttl>].
 
 <#lemma12> a r:Extraction; 
   r:gives {
+    :example_constraint_A13 rdfcv:classes :Publication.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A13_Property_Domains/constraint.ttl>].
+
+<#lemma13> a r:Extraction; 
+  r:gives {
     :Alices-Adventures-In-Wonderland :author :Lewis-Carroll.
   };
   r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A13_Property_Domains/data.ttl>].
 
-<#lemma13> a r:Extraction; 
+<#lemma14> a r:Extraction; 
   r:gives {
     {?x_0_2 a rdfcv:SimpleConstraint.
+      ?x_0_2 :constraintType :PropertyDomain.
       ?x_0_2 rdfcv:constrainingElement :property-domain.
       ?x_0_2 rdfcv:leftProperties ?x_1_2.
       ?x_0_2 rdfcv:classes ?x_2_2.
@@ -151,6 +159,6 @@ PREFIX r: <http://www.w3.org/2000/10/swap/reason#>
   };
   r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A13_Property_Domains/rule.n3>].
 
-#2017-01-23T16:44:30.310Z in=8 out=5 ent=10 step=12 brake=4 inf=66075 sec=0.074 inf/sec=892905
+#2017-02-08T13:55:38.044Z in=9 out=5 ent=10 step=12 brake=4 inf=68242 sec=0.074 inf/sec=922189
 #ENDS
 

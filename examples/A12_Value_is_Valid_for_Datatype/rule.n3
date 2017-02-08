@@ -17,13 +17,14 @@
 
 {
 ?constraint a rdfcv:SimpleConstraint ;
+  :constraintType :ValueIsValidForDatatype ;
   rdfcv:constrainingElement :value-is-valid-for-datatype ;
   rdfcv:contextClass  ?c ;
   rdfcv:leftProperties ?p ;
   rdfcv:classes ?dc .
 ?x a ?c.
 ?x ?p ?v.
-?v e:clashesWith ?dc
+?v :clashesWith ?dc
 
 }
 =>
@@ -43,7 +44,7 @@ _:x a :constraintViolation;
 
 #case ?x is not even a literal
 {
-?x e:clashesWith ?y
+?x :clashesWith ?y
 }
 <=
 {
@@ -54,7 +55,7 @@ _:x a :constraintViolation;
 
 #xsd:nonNegativeInteger
 {
-?x e:clashesWith xsd:nonNegativeInteger
+?x :clashesWith xsd:nonNegativeInteger
 }
 <=
 {
@@ -62,16 +63,16 @@ _:x a :constraintViolation;
 }.
 
 {
-?x e:clashesWith xsd:nonNegativeInteger
+?x :clashesWith xsd:nonNegativeInteger
 }
 <=
 {
-?x e:clashesWith xsd:integer
+?x :clashesWith xsd:integer
 }.
 
 #xsd:integer
 {
-?x e:clashesWith xsd:integer
+?x :clashesWith xsd:integer
 }
 <=
 {
@@ -81,7 +82,7 @@ _:x a :constraintViolation;
 
 # xsd:date
 {
-?x e:clashesWith xsd:date
+?x :clashesWith xsd:date
 }
 <=
 {
@@ -91,7 +92,7 @@ _:x a :constraintViolation;
 }.
 
 {
-?x e:clashesWith xsd:date
+?x :clashesWith xsd:date
 }
 <= {}.
 

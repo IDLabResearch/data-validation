@@ -6,6 +6,7 @@
 
 
 :example_constraint_A_4 a rdfcv:SimpleConstraint ;
+  :constraintType :Subsumption ;
   dcterms:title "A.4 Subsumption" ;
   rdfcv:constrainingElement :sub-class ;
   rdfcv:contextClass  :Book;

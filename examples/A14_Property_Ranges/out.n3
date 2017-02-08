@@ -1,4 +1,4 @@
-#Processed by EYE rel. v17.0117.2134 josd
+#Processed by EYE rel. v17.0131.1345 josd
 #eye data.ttl constraint.ttl rule.n3 --query ../query.n3
 
 PREFIX rdfcv: <http://www.dr-thomashartmann.de/phd-thesis/rdf-validation/vocabularies/rdf-constraints-vocabulary#>
@@ -95,9 +95,10 @@ PREFIX r: <http://www.w3.org/2000/10/swap/reason#>
     <#lemma10>
     <#lemma11>
     <#lemma12>
+    <#lemma13>
     [ a r:Fact; r:gives {((<file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A14_Property_Ranges/data.ttl> <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A14_Property_Ranges/constraint.ttl> <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A14_Property_Ranges/rule.n3>) 1) e:findall (1 {:Lewis-Carroll a :Person} ())}]
   );
-  r:rule <#lemma13>.
+  r:rule <#lemma14>.
 
 <#lemma7> a r:Extraction; 
   r:gives {
@@ -114,31 +115,38 @@ PREFIX r: <http://www.w3.org/2000/10/swap/reason#>
 
 <#lemma9> a r:Extraction; 
   r:gives {
-    :example_constraint_A14 rdfcv:constrainingElement :property-range.
+    :example_constraint_A14 :constraintType :PropertyRange.
   };
   r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A14_Property_Ranges/constraint.ttl>].
 
 <#lemma10> a r:Extraction; 
   r:gives {
-    :example_constraint_A14 rdfcv:leftProperties :author.
+    :example_constraint_A14 rdfcv:constrainingElement :property-range.
   };
   r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A14_Property_Ranges/constraint.ttl>].
 
 <#lemma11> a r:Extraction; 
   r:gives {
-    :example_constraint_A14 rdfcv:classes :Person.
+    :example_constraint_A14 rdfcv:leftProperties :author.
   };
   r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A14_Property_Ranges/constraint.ttl>].
 
 <#lemma12> a r:Extraction; 
   r:gives {
+    :example_constraint_A14 rdfcv:classes :Person.
+  };
+  r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A14_Property_Ranges/constraint.ttl>].
+
+<#lemma13> a r:Extraction; 
+  r:gives {
     :Alices-Adventures-In-Wonderland :author :Lewis-Carroll.
   };
   r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A14_Property_Ranges/data.ttl>].
 
-<#lemma13> a r:Extraction; 
+<#lemma14> a r:Extraction; 
   r:gives {
     {?x_0_2 a rdfcv:SimpleConstraint.
+      ?x_0_2 :constraintType :PropertyRange.
       ?x_0_2 rdfcv:constrainingElement :property-range.
       ?x_0_2 rdfcv:leftProperties ?x_1_2.
       ?x_0_2 rdfcv:classes ?x_2_2.
@@ -151,6 +159,6 @@ PREFIX r: <http://www.w3.org/2000/10/swap/reason#>
   };
   r:because [ a r:Parsing; r:source <file:///media/doerthe/4EC6F987C6F97017/store/RDF-Valdation/Val/constraint-rules/examples/A14_Property_Ranges/rule.n3>].
 
-#2017-01-23T17:00:38.286Z in=8 out=5 ent=10 step=12 brake=4 inf=65876 sec=0.076 inf/sec=866789
+#2017-02-08T13:56:45.936Z in=9 out=5 ent=10 step=12 brake=4 inf=68007 sec=0.084 inf/sec=809607
 #ENDS
 

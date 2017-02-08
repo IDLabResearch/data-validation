@@ -6,42 +6,49 @@
 
 
 <constraintintance> a rdfcv:SimpleConstraint ;
+  :constraintType :FunctionalProperties ;
   dcterms:title "A.1 Functional Properties" ;
   rdfcv:constrainingElement :functional-properties ;
   rdfcv:leftProperties ( <p1> <p2> <pn> ) ;
   rdfcv:contextClass  <C_context> .
 
 <constraintintance> a rdfcv:SimpleConstraint ;
+  :constraintType :InverseFunctionalProperties ;
   dcterms:title "A.2 Inverse-Functional Properties" ;
   rdfcv:constrainingElement :inverse-functional-properties ;
   rdfcv:leftProperties ( <p1> <p2> <pn> ) ;
   rdfcv:contextClass  <C_context> .
 
 <constraintintance> a rdfcv:SimpleConstraint ;
+  :constraintType :PrimaryKeyProperty ;
   dcterms:title "A.3 Primary Key Properties" ;
   rdfcv:constrainingElement :primary-key ;
   rdfcv:leftProperties  <p> ;
   rdfcv:contextClass  <C_context> .
 
 <constraintintance> a rdfcv:SimpleConstraint ;
+  :constraintType :Subsumption ;
   dcterms:title "A.4 Subsumption" ;
   rdfcv:constrainingElement :sub-class ;
   rdfcv:contextClass  <C1> ;
   rdfcv:classes <C2> .
 
 <constraintintance> a rdfcv:SimpleConstraint ;
+  :constraintType :SubProperty ;
   dcterms:title "A.5 Sub-Properties" ;
   rdfcv:constrainingElement :sub-property ;
   rdfcv:leftProperties <p1>; 
   rdfcv:rightProperties <p2>.
 
 <constraintintance> a rdfcv:SimpleConstraint ;
-  dcterms:title "A.6 Object Property Path" ;
+  :constraintType :ObjectPropertyPath ;
+  dcterms:title "A.6 Object Property Paths" ;
   rdfcv:constrainingElement :object-property-path ;
   rdfcv:leftProperties ( <p1> <p2> <pn> ); 
   rdfcv:rightProperties <p>.
 
 <constraintintance> a rdfcv:SimpleConstraint ;
+  :constraintType :AllowedValues ;
   dcterms:title "A.7 Allowed Values" ;
   rdfcv:constrainingElement :allowed-values ;
   rdfcv:contextClass  <C_context> ;
@@ -49,6 +56,7 @@
   rdfcv:classes (<C1> <C1> <Cn>).
 
 <constraintintance> a rdfcv:SimpleConstraint ;
+  :constraintType :NotAllowedValues ;
   dcterms:title "A.8 Not Allowed Values" ;
   rdfcv:constrainingElement :not-allowed-values ;
   rdfcv:contextClass  <C_context> ;
@@ -56,17 +64,20 @@
   rdfcv:classes (<C1> <C1> <Cn>).
 
 <constraintintance> a rdfcv:SimpleConstraint ;
+  :constraintType :ClassEquivalence ;
   dcterms:title "A.9 Class Equivalence" ;
   rdfcv:constrainingElement :equivalent-classes ;
   rdfcv:contextClass  <C_1> ;
   rdfcv:classes <C_2>.
 
 <constraintintance> a rdfcv:SimpleConstraint ;
+  :constraintType :EquivalentProperties ;
   dcterms:title "A.10 Equivalent Properties" ;
   rdfcv:constrainingElement :equivalent-properties ;
   rdfcv:leftProperties (<p1><p2><pn>).
 
 <constraintintance> a rdfcv:SimpleConstraint ;
+  :constraintType :LiteralValueComparison ;
   dcterms:title "A.11 Literal Value Comparison" ;
   rdfcv:constrainingElement <mathematical-symbol> ; 
   rdfs:comment "mathematical-symbol should be from <http://www.w3.org/2000/10/swap/math#>, <http://www.w3.org/2007/rif-builtin-function#> or <http://www.w3.org/2007/rif-builtin-predicate#>.";
@@ -76,6 +87,7 @@
   rdfcv:classes <DT> .
 
 <constraintintance> a rdfcv:SimpleConstraint ;
+  :constraintType :ValueIsValidForDatatype ;
   dcterms:title "A.12 Value is Valid for Datatype" ;
   rdfcv:constrainingElement :value-is-valid-for-datatype ;
   rdfcv:contextClass  <C_context> ;
@@ -83,18 +95,21 @@
   rdfcv:classes <DT> .
 
 <constraintintance> a rdfcv:SimpleConstraint ;
+  :constraintType :PropertyDomain ;
   dcterms:title "A.13 Property Domains" ;
   rdfcv:constrainingElement :property-domain ;
   rdfcv:leftProperties <p> ;
   rdfcv:classes <C> .
 
 <constraintintance> a rdfcv:SimpleConstraint ;
+  :constraintType :PropertyRange ;
   dcterms:title "A.14 Property Ranges" ;
   rdfcv:constrainingElement :property-range ;
   rdfcv:leftProperties <p> ;
   rdfcv:classes <C> .
 
 <constraintintance> a rdfcv:SimpleConstraint ;
+  :constraintType :ClassSpecificPropertyRange ;
   dcterms:title "A.15 Class-Specific Property Range" ;
   rdfcv:constrainingElement :property-range ;
   rdfcv:contextClass  <C_context> ;
@@ -102,9 +117,9 @@
   rdfcv:classes <C> .
 
 <constraintintance> a rdfcv:SimpleConstraint ;
+  :constraintType :DataPropertyFacets ; 
   dcterms:title "A.16 Data Property Facets" ;
   rdfcv:constrainingElement <ce> ;
-  :ctype :DataPropertyFacets; #it is safer to add something like that here.
   rdfs:comment "the constraining element can either be an xml shema constraining facet or a function which is supported by the reasoner used";
   rdfcv:contextClass  <C_context> ;
   rdfcv:leftProperties <p> ;

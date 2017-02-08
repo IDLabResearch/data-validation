@@ -17,8 +17,9 @@
 
 {
 ?constraint a rdfcv:SimpleConstraint ;
+  :constraintType :ClassSpecificPropertyRange ;
   rdfcv:constrainingElement :property-range ;
-    rdfcv:contextClass  ?c1 ;
+  rdfcv:contextClass  ?c1 ;
   rdfcv:leftProperties ?p ;
   rdfcv:classes ?c .
 ?x ?p ?o.
