@@ -145,3 +145,11 @@
   rdfcv:leftProperties <p> ;
   rdfcv:classes <DT> ;
   rdfcv:constrainingValue <literal_range> .
+
+<constraintintance> a rdfcv:SimpleConstraint ;
+  :constraintType :IRIPatternMatching ; 
+  dcterms:title "A.19 IRI Pattern Matching" ;
+  rdfs:comment  "Regular expression needs to be perl, python style.";
+  rdfcv:constrainingElement :IRI-pattern-matching ;
+  rdfcv:contextClass  <C_context> ;
+  rdfcv:constrainingValue <IRI_Pattern> .
