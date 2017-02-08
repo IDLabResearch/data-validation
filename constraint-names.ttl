@@ -127,8 +127,19 @@
 
 <constraintintance> a rdfcv:SimpleConstraint ;
   :constraintType :LiteralRanges ; 
-  rdfs:comment  "Currently supported xsd:mininclusive and xsd:maxInclusive, more can be added";
+  rdfs:comment  "Currently supported: xsd:mininclusive and xsd:maxInclusive, more can be added";
   dcterms:title "A.17 Literal Ranges" ;
+  rdfcv:constrainingElement <XSDConstrainingFacetsOnValues> ;
+  rdfcv:contextClass  <C_context> ;
+  rdfcv:leftProperties <p> ;
+  rdfcv:classes <DT> ;
+  rdfcv:constrainingValue <negative_literal_range> .
+
+<constraintintance> a rdfcv:SimpleConstraint ;
+  :relatedTo <otherInstance>;
+  :constraintType :NegativeLiteralRanges ; 
+  rdfs:comment  "Currently supported: xsd:mininclusive and xsd:maxInclusive, more can be added";
+  dcterms:title "A.18 Negative Literal Ranges" ;
   rdfcv:constrainingElement <XSDConstrainingFacetsOnValues> ;
   rdfcv:contextClass  <C_context> ;
   rdfcv:leftProperties <p> ;

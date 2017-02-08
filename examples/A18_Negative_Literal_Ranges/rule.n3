@@ -16,41 +16,49 @@
 
 
 {
-?constraint a rdfcv:SimpleConstraint ;
-  :constraintType :LiteralRanges ; 
-  rdfcv:constrainingElement ?ce ;
-  rdfcv:contextClass  ?CC ;
+?constraint1 a rdfcv:SimpleConstraint ;
+  :relatedTo  ?constraint2; 
+  :constraintType :NegativeLiteralRanges ; 
+  rdfcv:constrainingElement ?fst ;
+  rdfcv:contextClass  ?Class ;
   rdfcv:leftProperties ?p ;
   rdfcv:classes ?c ;
-  rdfcv:constrainingValue ?cv .
-?x a ?CC.
+  rdfcv:constrainingValue ?v1 .
+
+?constraint2 a rdfcv:SimpleConstraint ;
+  :constraintType :NegativeLiteralRanges ; 
+  rdfcv:constrainingElement ?scnd ;
+  rdfcv:contextClass  ?Class ;
+  rdfcv:leftProperties ?p ;
+  rdfcv:classes ?c ;
+  rdfcv:constrainingValue ?v2 .
+?x a ?Class.
 ?x ?p ?v.
 (?some ?c) log:dtlit ?v .
 
-(?v ?ce ?cv) :literalRangeCheck false.
+(?v ?fst ?scnd ?v1 ?v2) :negativeLiteralRangeCheck false.
 }
 =>
 {
 _:x a :constraintViolation;
-    :violatedConstraint ?constraint;
-    :constrainingElement ?ce;
+    :violatedConstraint ?constraint1;
+    :violatedConstraint ?constraint2;
+    :constrainingElement ?fst;
+    :constrainingElement ?scnd;
     :property ?p;
     :value ?v;
-    :restriction ?cv.
+    :restriction (?v1 ?v2).
 }.
 
 
-{(?v xsd:minInclusive ?cv) :literalRangeCheck false }
+{(?v xsd:minInclusive xsd:maxInclusive ?v1 ?v2) :negativeLiteralRangeCheck false. }
 <=
 {
-?v math:lessThan ?cv.
+?v math:notLessThan ?v1.
+?v math:notGreaterThan ?v2.
 }.
 
-{(?v xsd:maxInclusive ?cv) :literalRangeCheck false }
-<=
-{
-?v math:greaterThan ?cv
-}.
+
 
 
 
