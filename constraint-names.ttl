@@ -220,3 +220,11 @@
   rdfcv:contextClass  <C_context> ;
   rdfcv:leftProperties (<p1><p2><pn>) .
 
+<constraintintance> a rdfcv:SimpleConstraint ;
+  :constraintType :LanguageTagMatching ; 
+  dcterms:title "A.27 Language Tag Matching" ;
+  rdfcv:constrainingElement :language_tag_matching ;
+  rdfcv:contextClass  <C_context> ;
+  rdfcv:leftProperties <p> ;
+  rdfcv:constrainingValue <language_tag>.
+
