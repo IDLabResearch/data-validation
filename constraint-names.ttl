@@ -2,6 +2,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dcterms: <http://purl.org/dc/terms#> .
 @prefix : <http://example.com/constraints#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
 @base <http://example.com/constraints#> .
 
 
@@ -226,5 +227,14 @@
   rdfcv:constrainingElement :language_tag_matching ;
   rdfcv:contextClass  <C_context> ;
   rdfcv:leftProperties <p> ;
-  rdfcv:constrainingValue <language_tag>.
+  rdfcv:constrainingValue <language_tag> .
+
+<constraintintance> a rdfcv:SimpleConstraint ;
+  :constraintType :LanguageTagCardinality ; 
+  dcterms:title "A.28 Language Tag Cardinality" ;
+  rdfcv:constrainingElement [ owl:oneOf (:language_tag_minimum_cardinality :languageTag_maximum_cardinality :language_tag_exact_cardinality)] ;
+  rdfcv:contextClass  <C_context> ;
+  rdfcv:leftProperties <p> ;
+  rdfcv:constrainingValue <language_tag> ;
+  rdfcv:constrainingValue <cardinality> .
 
