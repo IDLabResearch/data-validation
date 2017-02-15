@@ -153,3 +153,63 @@
   rdfcv:constrainingElement :IRI-pattern-matching ;
   rdfcv:contextClass  <C_context> ;
   rdfcv:constrainingValue <IRI_Pattern> .
+
+<constraintintance> a rdfcv:SimpleConstraint ;
+  :constraintType :LiteralPatternMatching ; 
+  dcterms:title "A.20 Literal Pattern Matching" ;
+  rdfs:comment  "Regular expression needs to be perl, python style.";
+  rdfcv:constrainingElement :REGEX ;
+  rdfcv:contextClass  <C_context> ;
+  rdfcv:leftProperties <p> ;
+  rdfcv:classes <DT> ;
+  rdfcv:constrainingValue <literal_pattern> .
+
+<constraintintance> a rdfcv:SimpleConstraint ;
+  :constraintType :NegativeLiteralPatternMatching ; 
+  dcterms:title "A.21 Negative Literal Pattern Matching" ;
+  rdfs:comment  "Regular expression needs to be perl, python style.";
+  rdfcv:constrainingElement :negative_literal_pattern_matching ;
+  rdfcv:contextClass  <C_context> ;
+  rdfcv:leftProperties <p> ;
+  rdfcv:classes <DT> ;
+  rdfcv:constrainingValue <literal_pattern> .
+
+<constraintintance> a rdfcv:SimpleConstraint ;
+  :constraintType :ExistentialQuantification ; 
+  dcterms:title "A.22 Existential Quantifications" ;
+  rdfcv:constrainingElement :existential_quantification ;
+  rdfcv:contextClass  <C_context> ;
+  rdfcv:leftProperties <p> ;
+  rdfcv:classes <C_or_DT> .
+
+<constraintintance> a rdfcv:SimpleConstraint ;
+  :constraintType :UniversalQuantification ; 
+  dcterms:title "A.23 Universal Quantifications" ;
+  rdfcv:constrainingElement :universal_quantification ;
+  rdfcv:contextClass  <C_context> ;
+  rdfcv:leftProperties <p> ;
+  rdfcv:classes <C_or_DT> .
+
+<constraintintance> a rdfcv:SimpleConstraint ;
+  :constraintType :ValueRestrictions ; 
+  dcterms:title "A.24 Value Restrictions" ;
+  rdfcv:constrainingElement :value_restriction ;
+  rdfcv:contextClass  <C_context> ;
+  rdfcv:leftProperties <p> ;
+  rdfcv:classes <Individual> .
+
+<constraintintance> a rdfcv:SimpleConstraint ;
+  :constraintType :UseSubSuperRelations ; 
+  dcterms:title "A.25 Use Sub-Super Relations in Validation" ;
+  rdfcv:constrainingElement :use_sub-super_relations ;
+  rdfcv:contextClass  <C_context> ;
+  rdfcv:leftProperties <p> ;
+  rdfcv:rightProperties (<p1> <p2> <pn>) .
+
+<constraintintance> a rdfcv:SimpleConstraint ;
+  :constraintType :UseSubSuperRelations ; 
+  dcterms:title "A.25 Use Sub-Super Relations in Validation" ;
+  rdfcv:constrainingElement :use_sub-super_relations ;
+  rdfcv:contextClass  <C_context> ;
+  rdfcv:classes (<C1><C2><Cn>).
+
