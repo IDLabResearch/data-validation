@@ -211,5 +211,12 @@
   dcterms:title "A.25 Use Sub-Super Relations in Validation" ;
   rdfcv:constrainingElement :use_sub-super_relations ;
   rdfcv:contextClass  <C_context> ;
-  rdfcv:classes (<C1><C2><Cn>).
+  rdfcv:classes (<C1><C2><Cn>) .
+
+<constraintintance> a rdfcv:SimpleConstraint ;
+  :constraintType :NegativePropertyConstraint ; 
+  dcterms:title "A.26 Negative Property Constraints" ;
+  rdfcv:constrainingElement :negative_properties ;
+  rdfcv:contextClass  <C_context> ;
+  rdfcv:leftProperties (<p1><p2><pn>) .
 
