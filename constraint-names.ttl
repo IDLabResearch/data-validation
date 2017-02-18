@@ -238,3 +238,44 @@
   rdfcv:constrainingValue <language_tag> ;
   rdfcv:constrainingValue <cardinality> .
 
+<constraintintance> a rdfcv:SimpleConstraint ;
+  :constraintType :MinimumUnqualifiedCardinalityRestrictions ; 
+  dcterms:title "A.32 Minimum Unqualified Cardinality Restrictions" ;
+  rdfcv:constrainingElement :minimum-cardinality ;
+  rdfcv:contextClass  <C_context> ;
+  rdfcv:leftProperties <p> ;
+  rdfcv:constrainingValue <n> .
+
+<constraintintance> a rdfcv:SimpleConstraint ;
+  :constraintType :MinimumQualifiedCardinalityRestrictions ; 
+  dcterms:title "A.33 Minimum Qualified Cardinality Restrictions" ;
+  rdfcv:constrainingElement :minimum-cardinality ;
+  rdfcv:contextClass  <C_context> ;
+  rdfcv:leftProperties <p> ;
+  rdfcv:classes <C_or_DT> ;
+  rdfcv:constrainingValue <n> .
+
+<constraintintance> a rdfcv:SimpleConstraint ;
+  :constraintType :RequiredProperties ; 
+  dcterms:title "A.41 Required Properties" ;
+  rdfcv:constrainingElement :required_properties ;
+  rdfcv:contextClass  <C_context> ;
+  rdfcv:leftProperties (<p1><p2><pn>) .
+
+<constraintintance> a rdfcv:SimpleConstraint ;
+  :constraintType :AsymmetricProperty ; 
+  dcterms:title "A.57 Asymmetric Object Properties" ;
+  rdfcv:constrainingElement :asymmetric_property ;
+  rdfcv:leftProperties <p> .
+
+<constraintintance> a rdfcv:SimpleConstraint ;
+  :constraintType :IrreflexiveObjectProperty ; 
+  dcterms:title "A.64 Irreflexive Object Properties" ;
+  rdfcv:constrainingElement :irreflexive_property ;
+  rdfcv:leftProperties <p> .
+
+<constraintintance> a rdfcv:SimpleConstraint ;
+  :constraintType :DisjointProperties ; 
+  dcterms:title "A.69 Disjoint Properties" ;
+  rdfcv:constrainingElement :disjoint_properties ;
+  rdfcv:leftProperties (<p1><p2><pn>) .
