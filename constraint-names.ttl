@@ -313,3 +313,19 @@
   dcterms:title "A.69 Disjoint Properties" ;
   rdfcv:constrainingElement :disjoint_properties ;
   rdfcv:leftProperties (<p1><p2><pn>) .
+
+<constraintinstance> a rdfcv:SimpleConstraint ;
+  :constraintType :PVTPattern ;
+  dcterms:title "B.1 PVT Pattern" ;
+  rdfcv:constrainingElement :pvt-pattern ;
+  rdfcv:leftProperties <p1> ;
+  rdfcv:rightProperties <p2> ; 
+  rdfcv:classes <I_or_L> .
+
+<constraintinstance> a rdfcv:SimpleConstraint ;
+  :constraintType :TriplePattern ;
+  dcterms:title "B.2 Triple Pattern" ;
+  rdfcv:constrainingElement :triple-pattern ;
+  rdfcv:leftProperties <p> ;
+  rdfcv:classes <I_or_L> .
+  
