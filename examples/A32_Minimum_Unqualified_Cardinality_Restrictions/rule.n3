@@ -17,7 +17,6 @@
 {
 ?constraint a rdfcv:SimpleConstraint ;
   :constraintType :MinimumUnqualifiedCardinalityRestrictions ; 
-  dcterms:title "A.32 Minimum Unqualified Cardinality Restrictions" ;
   rdfcv:constrainingElement :minimum-cardinality ;
   rdfcv:contextClass  ?Class ;
   rdfcv:leftProperties ?p ;

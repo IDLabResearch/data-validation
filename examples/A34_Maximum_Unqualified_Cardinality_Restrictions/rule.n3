@@ -16,17 +16,16 @@
 
 {
 ?constraint a rdfcv:SimpleConstraint ;
-  :constraintType :MinimumQualifiedCardinalityRestrictions ; 
-  rdfcv:constrainingElement :minimum-cardinality ;
-  rdfcv:contextClass ?Class ;
+  :constraintType :MaximumUnqualifiedCardinalityRestrictions ; 
+  rdfcv:constrainingElement :maximum-cardinality ;
+  rdfcv:contextClass  ?Class ;
   rdfcv:leftProperties ?p ;
-  rdfcv:classes ?C;
   rdfcv:constrainingValue ?v .
 
 ?x a ?Class.
-_:x e:findall ( ?C {?x ?p ?o. ?o a ?C} ?list).
+_:x e:findall ( 1 {?x ?p ?o} ?list).
 ?list e:length ?l.
-?l math:lessThan ?v.
+?l math:greaterThan ?v.
 }
 =>
 {
@@ -34,7 +33,6 @@ _:x a :constraintViolation;
     :violatedConstraint ?constraint;
     :class ?Class;
     :instance ?x;
-    :objectClass ?C;
     :property ?p.
 }.
 

@@ -256,6 +256,14 @@
   rdfcv:constrainingValue <n> .
 
 <constraintintance> a rdfcv:SimpleConstraint ;
+  :constraintType :MaximumUnqualifiedCardinalityRestrictions ; 
+  dcterms:title "A.34 Maximum Unqualified Cardinality Restrictions" ;
+  rdfcv:constrainingElement :maximum-cardinality ;
+  rdfcv:contextClass  <C_context> ;
+  rdfcv:leftProperties <p> ;
+  rdfcv:constrainingValue <n> .
+
+<constraintintance> a rdfcv:SimpleConstraint ;
   :constraintType :RequiredProperties ; 
   dcterms:title "A.41 Required Properties" ;
   rdfcv:constrainingElement :required_properties ;
