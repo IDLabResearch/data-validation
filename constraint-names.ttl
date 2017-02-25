@@ -314,6 +314,12 @@
   rdfcv:constrainingElement :disjoint_properties ;
   rdfcv:leftProperties (<p1><p2><pn>) .
 
+<constraintintance> a rdfcv:SimpleConstraint ;
+  :constraintType :DisjointClasses ; 
+  dcterms:title "A.70 Disjoint Classes" ;
+  rdfcv:constrainingElement :disjoint_classes ;
+  rdfcv:classes (<C1><C2><Cn>) .
+
 <constraintinstance> a rdfcv:SimpleConstraint ;
   :constraintType :PVTPattern ;
   dcterms:title "B.1 PVT Pattern" ;
