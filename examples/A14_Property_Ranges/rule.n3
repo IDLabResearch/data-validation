@@ -11,6 +11,7 @@
 @prefix pred: <http://www.w3.org/2007/rif-builtin-predicate#> .
 @prefix prolog: <http://eulersharp.sourceforge.net/2003/03swap/prolog#>.
 @prefix string: <http://www.w3.org/2000/10/swap/string#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @base <http://example.com/constraints#> .
 
 
@@ -22,7 +23,7 @@
   rdfcv:leftProperties ?p ;
   rdfcv:classes ?c .
 ?x ?p ?o.
-_:x e:findall (1 {?o a ?c} ()).
+_:x e:findall (1 {?o :in ?c} ()).
 
 }
 =>
@@ -34,5 +35,22 @@ _:x a :constraintViolation;
     :expectedRange ?c.
 }.
 
+{?o a rdf:langString}
+<=
+{
+  (?o) func:lang-from-PlainLiteral ?v.
+  ?v log:notEqualTo "".
+}.
 
 
+{?o :in ?c}
+<=
+{
+?o a ?c
+}.
+
+{?o :in ?c}
+<=
+{ 
+(?some ?c) log:dtlit ?o .
+}.
